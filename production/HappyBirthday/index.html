@@ -1,0 +1,781 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生日快乐</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 680px;
+            overflow: hidden;
+            background: url("images/bgc.jpg") no-repeat;
+            background-size: 100%;
+        }
+
+        .w {
+            width: 980px;
+            height: 550px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        /*边框部分*/
+        .box {
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+            border: 1px solid green;
+        }
+
+        .box:nth-child(1) {
+            width: 100%;
+            height: 1px;
+            margin-top: 0px;
+            background-image: linear-gradient(135deg,
+            yellow 25%,
+            green 25%,
+            green 50%,
+            yellow 50%,
+            yellow 75%,
+            green 75%);
+            animation: blink 10s linear infinite;
+            background-size: 20px 20px;
+            /*background-repeat: no-repeat;*/
+        }
+
+        .box:nth-child(2) {
+            width: 1px;
+            height: 100%;
+            background-image: linear-gradient(135deg,
+            pink 25%,
+            red 25%,
+            red 50%,
+            pink 50%,
+            pink 75%,
+            red 75%);
+            animation: move4 10s linear infinite;
+            background-size: 20px 20px;
+            float: left;
+            /*background-repeat: no-repeat;*/
+        }
+
+        .box:nth-child(3) {
+            width: 1px;
+            height: 100%;
+            background-image: linear-gradient(135deg,
+            pink 25%,
+            red 25%,
+            red 50%,
+            pink 50%,
+            pink 75%,
+            red 75%
+            );
+            animation: move3 10s linear infinite;
+            background-size: 20px 20px;
+            float: right;
+            background-position: 0px 53px;
+        }
+        .box:nth-child(4) {
+            width: 100%;
+            height: 1px;
+            margin-top: 550px;
+            background-image: linear-gradient(135deg,
+            yellow 25%,
+            green 25%,
+            green 50%,
+            yellow 50%,
+            yellow 75%,
+            green 75%);
+            animation: blink 10s linear infinite;
+            background-size: 20px 20px;
+            /*background-repeat: no-repeat;*/
+        }
+
+        @keyframes blink {
+            from {
+            }
+            to {
+                background-position: 200px 0;
+            }
+        }
+
+        @keyframes move4 {
+            from {
+            }
+            to {
+                background-position: 0px 200px;
+            }
+        }
+
+        @keyframes move3 {
+            from {
+                background-position: 0px 53px;
+            }
+            to {
+                background-position: 0px 253px;
+            }
+        }
+
+        .title {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .pop1, .pop2, .pop3, .pop4, .pop5, .pop6, .pop7 {
+            width: 100px;
+            height: 140px;
+            background: rgba(182, 15, 97, 0.9);
+            box-shadow: inset 10px 10px 10px rgba(135, 11, 72, 0.9);
+            border-radius: 80% 80% 80% 80%;
+            position: absolute;
+            transform-origin: center bottom;
+        }
+
+        .pop1 {
+            top: 0px;
+            left: 340px;
+            animation: move2 6s infinite linear;
+        }
+
+        .pop2 {
+            top: 0px;
+            left: 460px;
+            background: rgba(242, 112, 45, 0.9);
+            box-shadow: inset 10px 10px 10px rgba(222, 85, 14, 0.9);
+            animation: move1 5s infinite linear;
+        }
+
+        .pop3 {
+            top: 0px;
+            left: 580px;
+            background: rgba(45, 181, 167, 0.9);
+            box-shadow: inset 10px 10px 10px rgba(35, 140, 129, 0.9);
+            animation: move1 8s infinite linear;
+        }
+
+        .pop4 {
+            top: 0px;
+            left: 700px;
+            background-color: rgba(190, 61, 244, 0.9);
+            box-shadow: inset 10px 10px 10px rgba(173, 14, 240, 0.9);
+            animation: move2 6s infinite linear;
+        }
+
+        .pop5 {
+            top: 0px;
+            left: 820px;
+            background: rgba(180, 224, 67, 0.9);
+            box-shadow: inset 10px 10px 10px rgba(158, 206, 34, 0.9);
+            animation: move1 9s infinite linear;
+        }
+
+        .pop6 {
+            top: 0px;
+            left: 100px;
+            background: rgba(180, 224, 67, 0.9);
+            box-shadow: inset 10px 10px 10px rgba(158, 206, 34, 0.9);
+            animation: move1 9s infinite linear;
+        }
+
+        .pop7 {
+            top: 0px;
+            left: 220px;
+            background: rgba(180, 224, 67, 0.9);
+            box-shadow: inset 10px 10px 10px rgba(158, 206, 34, 0.9);
+            animation: move1 9s infinite linear;
+        }
+
+        .pop1:before, .pop2:before, .pop3:before, .pop4:before, .pop5:before, .pop6:before, .pop7:before {
+            content: "▲";
+            font-size: 1em;
+            color: rgba(182, 15, 97, 0.9);
+            position: absolute;
+            left: 43px;
+            bottom: -11px;
+        }
+
+        .pop2:before {
+            color: rgba(242, 112, 45, 0.9);
+
+        }
+
+        .pop3:before {
+            color: rgba(35, 140, 129, 0.9);
+        }
+
+        .pop4:before {
+            color: rgba(173, 14, 240, 0.9);
+        }
+
+        .pop5:before {
+            color: rgba(180, 224, 67, 0.9);
+        }
+
+        .pop1 span, .pop2 span, .pop3 span, .pop4 span, .pop5 span, .pop6 span, .pop7 span {
+            font-size: 4.8em;
+            color: white;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            margin-left: -35px;
+            margin-top: -20px;
+        }
+
+        .pop5 span {
+            margin-left: -20px;
+        }
+
+        @keyframes move1 {
+            0% {
+                transform: rotateZ(-30deg);
+            }
+            50% {
+                transform: rotateZ(30deg);
+            }
+            100% {
+                transform: rotateZ(-30deg);
+            }
+        }
+
+        @keyframes move2 {
+            0% {
+                transform: rotateZ(30deg);
+            }
+            50% {
+                transform: rotateZ(-30deg);
+            }
+            100% {
+                transform: rotateZ(30deg);
+            }
+        }
+
+        /*手风琴祝福语*/
+        .sfq {
+            width: 300px;
+            position: absolute;
+            top: 200px;
+            left: 330px;
+            z-index: 2;
+        }
+
+        .sfq1top, .sfq2top, .sfq3top, .sfq4top {
+            width: 300px;
+            height: 50px;
+            background-color: royalblue;
+            border: 1px solid green;
+            opacity: 0.2;
+            transition: all 1s;
+            font: 400 25px/50px "simsun";
+            color: white;
+            text-align: center;
+        }
+
+        .sfq1top {
+            border-radius: 5px 5px 0px 0px;
+        }
+
+        .sfq1bottom, .sfq2bottom, .sfq3bottom, .sfq4bottom {
+            transition: all 1s;
+            font: 400 16px/32px "simsun";
+            color: rgba(0, 0, 0, 0.7);
+            height: 0px;
+            opacity: 0;
+        }
+
+        .sfq1:hover .sfq1top {
+            opacity: 1;
+        }
+
+        .sfq2:hover .sfq2top {
+            opacity: 1;
+        }
+
+        .sfq3:hover .sfq3top {
+            opacity: 1;
+        }
+
+        .sfq4:hover .sfq4top {
+            opacity: 1;
+        }
+
+        .sfq1:hover .sfq1bottom {
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            opacity: 1;
+        }
+
+        .sfq2:hover .sfq2bottom {
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            opacity: 1;
+        }
+
+        .sfq3:hover .sfq3bottom {
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            opacity: 1;
+        }
+
+        .sfq4:hover .sfq4bottom {
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            opacity: 1;
+        }
+
+        /*3d魔方部分开始*/
+        .div {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            font: 700 20px/150px "simsun";
+            text-align: center;
+            transform-style: preserve-3d;
+            transform: perspective(1000px) rotateX(45deg) rotateY(0deg);
+            animation: rotate 10s linear infinite;
+            top: 220px;
+            left: 70px;
+        }
+
+        .div:hover {
+            animation-play-state: paused;
+        }
+
+        .box1, .box2, .box3, .box4, .box5, .box6 {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .box1 {
+            background: url("images/11.jpg") no-repeat;
+            background-size: 150px 150px;
+            transform: translateZ(75px);
+        }
+
+        .box2 {
+            background: url("images/12.jpg") no-repeat;
+            background-size: 150px 150px;
+            transform: rotateY(-90deg) translateZ(75px);
+        }
+
+        .box3 {
+            background: url("images/13.jpg") no-repeat;
+            background-size: 150px 150px;
+            transform: translateZ(-75px);
+        }
+
+        .box4 {
+            background: url("images/14.jpg") no-repeat;
+            background-size: 150px 150px;
+            transform: rotateY(90deg) translateZ(75px);
+        }
+
+        .box5 {
+            background: url("images/15.jpg") no-repeat;
+            background-size: 150px 150px;
+            transform: rotateX(90deg) translateZ(75px);
+        }
+
+        .box6 {
+            background: url("images/16.jpg") no-repeat;
+            background-size: 150px 150px;
+            transform: rotateX(-90deg) translateZ(75px);
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotateX(0deg) rotateY(360deg);
+            }
+            to {
+                transform: rotateX(360deg) rotateY(0deg);
+            }
+        }
+
+        /*滚动条祝福语*/
+        #main {
+            width: 250px;
+            padding: 10px 10px 10px;
+            border-radius: 10px;
+            margin: 20px auto;
+            background-color: #F1F1F1;
+            position: absolute;
+            right: 20px;
+            top: 150px;
+        }
+
+        #main h3 {
+            height: 20px;
+            line-height: 20px;
+            font-size: 17px;
+            padding-left: 5px;
+            margin-bottom: 5px;
+            color: #676764;
+        }
+
+        #main #tween {
+            overflow: hidden;
+            background-color: #FFF;
+        }
+
+        #msg {
+            height: 200px;
+            padding: 10px 15px;
+            position: relative;
+        }
+
+        #msg li {
+            overflow: hidden;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed gray;
+        }
+
+        #msg .photo {
+            width: 50px;
+            height: 50px;
+            margin-left: 20px;
+            float: left;
+        }
+
+        .photo1 {
+            background: url("images/1.jpg") no-repeat;
+            background-size: 50px 50px;
+        }
+
+        .photo2 {
+            background: url("images/2.jpg") no-repeat;
+            background-size: 50px 50px;
+        }
+
+        .photo3 {
+            background: url("images/3.jpg") no-repeat;
+            background-size: 50px 50px;
+        }
+
+        .photo4 {
+            background: url("images/4.jpg") no-repeat;
+            background-size: 50px 50px;
+        }
+
+        .photo5 {
+            background: url("images/5.jpg") no-repeat;
+            background-size: 50px 50px;
+        }
+
+        .photo6 {
+            background: url("images/6.jpg") no-repeat;
+            background-size: 50px 50px;
+        }
+
+        .photo7 {
+            background: url("images/7.jpg") no-repeat;
+            background-size: 50px 50px;
+        }
+
+        #msg .t {
+            width: 200px;
+            float: right;
+        }
+
+        #msg .t p {
+            font-size: 14px;
+            font-family: '宋体';
+        }
+
+        /*向左焦点图*/
+        .lbt {
+            width: 974px;
+            height: 100px;
+            border: 1px solid gold;
+            margin: 100px auto;
+            overflow: hidden;
+            position: absolute;
+            top: 350px;
+            left: 2px;
+        }
+
+        .lbt ul {
+            width: 2000px;
+            height: 100px;
+            list-style: none;
+            position: absolute;
+            animation: jjt 10s linear infinite;
+        }
+
+        .lbt li {
+            width: 200px;
+            height: 100px;
+            float: left;
+        }
+
+        .lbt li:nth-child(1) {
+            background: url("images/11.jpg") no-repeat;
+            background-size: 200px 100px;
+        }
+
+        .lbt li:nth-child(2) {
+            background: url("images/12.jpg") no-repeat;
+            background-size: 200px 100px;
+        }
+
+        .lbt li:nth-child(3) {
+            background: url("images/13.jpg") no-repeat;
+            background-size: 200px 100px;
+        }
+
+        .lbt li:nth-child(4) {
+            background: url("images/14.jpg") no-repeat;
+            background-size: 200px 100px;
+        }
+
+        .lbt li:nth-child(5) {
+            background: url("images/15.jpg") no-repeat;
+            background-size: 200px 100px;
+        }
+
+        .lbt li:nth-child(6) {
+            background: url("images/11.jpg") no-repeat;
+            background-size: 200px 100px;
+        }
+
+        .lbt li:nth-child(7) {
+            background: url("images/12.jpg") no-repeat;
+            background-size: 200px 100px;
+        }
+
+        .lbt li:nth-child(8) {
+            background: url("images/13.jpg") no-repeat;
+            background-size: 200px 100px;
+        }
+
+        .lbt li:nth-child(9) {
+            background: url("images/14.jpg") no-repeat;
+            background-size: 200px 100px;
+        }
+
+        .lbt li:nth-child(10) {
+            background: url("images/15.jpg") no-repeat;
+            background-size: 200px 100px;
+        }
+
+        .lbt ul:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes jjt {
+            0% {
+                left: -0px;
+            }
+            100% {
+                left: -500px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="w">
+    <!--边框部分-->
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <!--气球部分-->
+    <div class="title">
+        <div class="pop7">
+            <span>哥</span>
+        </div>
+        <div class="pop6">
+            <span>哥</span>
+        </div>
+        <div class="pop1">
+            <span>生</span>
+        </div>
+        <div class="pop2">
+            <span>日</span>
+        </div>
+        <div class="pop3">
+            <span>快</span>
+        </div>
+        <div class="pop4">
+            <span>乐</span>
+        </div>
+        <div class="pop5">
+            <span>!</span>
+        </div>
+    </div>
+    <!--手风祝福部分-->
+    <div class="sfq">
+        <div class="sfq1">
+            <div class="sfq1top">生日快乐！</div>
+            <div class="sfq1bottom">
+                哥哥，生日快乐，希望你心想事成，快快乐乐！！
+            </div>
+        </div>
+        <div class="sfq2">
+            <div class="sfq2top">永远开心！</div>
+            <div class="sfq2bottom">
+                风是透明的，雨是滴答的，云是流动的，歌是自由的，心情代表人生~~
+            </div>
+        </div>
+        <div class="sfq3">
+            <div class="sfq3top">学业有成！</div>
+            <div class="sfq3bottom">
+                在快乐的时光里开心玩耍，在奋斗的年纪里努力奋斗！一帆风顺~
+            </div>
+        </div>
+        <div class="sfq4">
+            <div class="sfq4top">心想事成！</div>
+            <div class="sfq4bottom">
+                快乐、健康、美丽，生命需要奋斗、创造、把握！心想事成！
+            </div>
+        </div>
+    </div>
+    <!--3d魔方部分-->
+    <div class="div">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+    </div>
+    <!--滚动祝福语言-->
+    <!--滚动祝福语-->
+    <div id="main">
+        <h3>各国领导人发来贺电</h3>
+
+        <div id="tween">
+            <ul id="msg">
+                <li>
+                    <div class="photo photo1"></div>
+                    <div class="t">
+                        <span>奥巴马</span>
+
+                        <p>我代表美利坚合众国向您表示由衷的祝福！生日快乐！</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="photo photo2"></div>
+                    <div class="t">
+                        <span>习大大</span>
+
+                        <p>我代表中国15亿人民对您表示由衷的祝福！生日快乐哥哥！</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="photo photo3"></div>
+                    <div class="t">
+                        <span>英国女王</span>
+
+                        <p>我代表英国人民对您表示祝福！感谢您对英语在中国的发展与传播！</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="photo photo4"></div>
+                    <div class="t">
+                        <span>普京</span>
+
+                        <p>生日快乐！</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="photo photo5"></div>
+                    <div class="t">
+                        <span>金正恩</span>
+
+                        <p>朝鲜人民发来贺电！！</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="photo photo6"></div>
+                    <div class="t">
+                        <span>法国总统</span>
+
+                        <p>法国人民发来贺电！</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="photo photo7"></div>
+                    <div class="t">
+                        <span>日本首相</span>
+
+                        <p>日本人民发来贺电！</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--向左焦点图-->
+    <div class="lbt">
+        <ul>
+            <li class="one"></li>
+            <li style="background-color:pink" class="two"></li>
+            <li style="background-color:green" class="three"></li>
+            <li style="background-color:blanchedalmond" class="four"></li>
+            <li style="background-color:yellow" class="five"></li>
+            <li style="background-color:red" class="one"></li>
+            <li style="background-color:pink" class="two"></li>
+            <li style="background-color:green" class="three"></li>
+            <li style="background-color:blanchedalmond" class="four"></li>
+            <li style="background-color:yellow" class="five"></li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
+<script>
+    function removeWhitespace(xml) {
+        var loopIndex;
+        for (loopIndex = 0; loopIndex < xml.childNodes.length; loopIndex++) {
+            var currentNode = xml.childNodes[loopIndex];
+            if (currentNode.nodeType == 1) {
+                removeWhitespace(currentNode);
+            }
+
+            if (((/^\s+$/.test(currentNode.nodeValue))) && (currentNode.nodeType == 3)) {
+                xml.removeChild(xml.childNodes[loopIndex--]);
+            }
+        }
+    }
+    var ulObj = document.getElementById('msg');
+    removeWhitespace(ulObj);
+    var firstLi = ulObj.firstChild;
+    var firstLiHeight = firstLi.offsetHeight;
+
+    ulObj.style.top = -firstLiHeight - 10 + 'px';
+    var h = parseInt(ulObj.style.top);
+    var n = h;
+    function tw() {
+        n = n + Math.abs(h / 100);
+
+        if (n <= 0) {
+            ulObj.style.top = n + 'px';
+            window.setTimeout(arguments.callee, 10);
+        } else {
+            firstLi = ulObj.lastChild.cloneNode(true);
+            ulObj.removeChild(ulObj.lastChild);
+            ulObj.insertBefore(firstLi, ulObj.firstChild);
+            firstLiHeight = firstLi.offsetHeight;
+            ulObj.style.top = -firstLiHeight - 10 + 'px';
+            h = parseInt(ulObj.style.top);
+            n = h;
+            window.setTimeout(arguments.callee, 2000);
+        }
+
+    }
+    tw();
+</script>

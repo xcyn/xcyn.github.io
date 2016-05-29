@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/javascript/Land.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javascript/Pipe.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javascript/Sky.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javascript/bird.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javascript/img_onload.js" charset="UTF-8" />
+  </component>
+</project>

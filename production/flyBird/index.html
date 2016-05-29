@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>人生第一个小游戏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        canvas {
+            border: 1px solid green;
+            margin-left: 0px;
+        }
+    </style>
+</head>
+<body>
+<canvas id="cvs" height="700" width="1350"></canvas>
+</body>
+</html>
+<script src="javascript/img_onload.js"></script>
+<script src="javascript/bird.js"></script>
+<script src="javascript/Sky.js"></script>
+<script src="javascript/Land.js"></script>
+<script src="javascript/Pipe.js"></script>
+<script>
+    var cvs = document.getElementById('cvs');
+    var ctx = cvs.getContext('2d');
+    var gameOver = false;
+    //绘制文字
+    function font() {
+        ctx.font = '50px 微软雅黑';
+        ctx.fillStyle = 'red';
+        ctx.fillText("人生的写第一次游戏，留个纪念！小熊~~", 200, 650);
+    }
+
+    //主函数部分
+    function main() {
+        //创建小鸟
+        var bird1 = new Bird(imgObj[0], -1, 0.001, 200, 200);
+        //创建天空
+        var sky1 = new Sky(imgObj[4], 0);
+        var sky2 = new Sky(imgObj[4], 1350);
+        //创建大地
+        var land1 = new Land(imgObj[1], 0);
+        var land2 = new Land(imgObj[1], 336);
+        var land3 = new Land(imgObj[1], 336 * 2);
+        var land4 = new Land(imgObj[1], 336 * 3);
+        var land5 = new Land(imgObj[1], 336 * 4);
+        //创建管子
+        var pipe1 = new Pipe(imgObj[3], imgObj[2], 1350);
+        var pipe2 = new Pipe(imgObj[3], imgObj[2], 1620);
+        var pipe3 = new Pipe(imgObj[3], imgObj[2], 1890);
+        var pipe4 = new Pipe(imgObj[3], imgObj[2], 2160);
+        var pipe5 = new Pipe(imgObj[3], imgObj[2], 2430);
+
+        //获取第一次进定时器时候的时间
+        var lastTime = new Date();
+
+        function loop() {
+            var waitTime = new Date() - lastTime;
+            lastTime = new Date();
+            ctx.clearRect(0, 0, 1350, 700);
+            //数据更新区块
+            sky1.updata(waitTime);
+            sky2.updata(waitTime);
+            pipe1.updata(waitTime);
+            pipe2.updata(waitTime);
+            pipe3.updata(waitTime);
+            pipe4.updata(waitTime);
+            pipe5.updata(waitTime);
+            land1.updata(waitTime);
+            land2.updata(waitTime);
+            land3.updata(waitTime);
+            land4.updata(waitTime);
+            land5.updata(waitTime);
+            bird1.updata(waitTime);
+            //更新数据后更新路径
+            ctx.beginPath();
+            //数据渲染区块
+            sky1.draw();
+            sky2.draw();
+            pipe1.draw();
+            pipe2.draw();
+            pipe3.draw();
+            pipe4.draw();
+            pipe5.draw();
+            land1.draw();
+            land2.draw();
+            land3.draw();
+            land4.draw();
+            land5.draw();
+            bird1.draw();
+            font();
+            //点击让小鸟飞起
+            bird1.fly();
+
+            console.log(bird1.x)
+            //判断游戏的终止
+            if (bird1.y < 0 || bird1.y > 700 - 150) {
+                gameOver = true;
+            }
+            if (ctx.isPointInPath(bird1.x, bird1.y)) {
+                gameOver = true;
+            }
+            if (!gameOver) {
+                requestAnimationFrame(loop);
+            } else {
+                alert('游戏结束');
+            }
+
+        }
+
+        loop();
+    }
+</script>

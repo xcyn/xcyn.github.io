@@ -1,0 +1,277 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>贪吃蛇</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            overflow: hidden;
+        }
+
+        div {
+            overflow: hidden;
+            margin: 0 auto;
+            position: relative;
+            background: url("images/snakeBgc.jpg");
+            background-size: 100% 100%;
+        }
+
+        ul {
+            overflow: hidden;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            width: 20px;
+            height: 20px;
+            float: left;
+            /*margin: 1px;*/
+            border: 1px solid #ccc;
+        }
+
+        li.red {
+            background-color: red;
+        }
+
+        button {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            right: 0px;
+            border-radius: 10px;
+            box-shadow: 5px 6px 0 #000;
+            outline-style: none;
+        }
+
+        button:nth-of-type(1) {
+            background-color: pink;
+            font: 700 16px/50px "simsun";
+            top: 10%;
+        }
+
+        button:nth-of-type(2) {
+            background-color: yellow;
+            font: 700 16px/50px "simsun";
+            top: 20%;
+        }
+
+        button:nth-of-type(3) {
+            background-color: yellow;
+            font: 700 16px/50px "simsun";
+            top: 30%;
+        }
+
+        button:nth-of-type(4) {
+            background-color: yellow;
+            font: 700 16px/50px "simsun";
+            top: 40%;
+        }
+
+        button:nth-of-type(1):hover {
+            background-color: darkgreen;
+            color: #fff;
+        }
+
+        button:nth-of-type(2):hover {
+            background-color: #240f64;
+            color: #fff;
+        }
+
+        button:nth-of-type(3):hover {
+            background-color: #642116;
+            color: #fff;
+        }
+
+        button:nth-of-type(4):hover {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<audio src="music/Pitbull - Bon, Bon.mp3" autoplay></audio>
+
+</body>
+</html>
+<script>
+    //创建蛇
+    function Snake(width, height) {
+        this.width = width;
+        this.height = height;
+        this.body = [];
+        this.direction = 1;
+        this.timer = null;
+        this.speed = 200;
+        this.list = null;
+        this.count = width * height;
+    }
+    Snake.prototype = {
+        construstor: Snake,
+        init: function () {
+            var div = document.createElement('div');
+            var startBtn = document.createElement('button');
+            var stopBtn = document.createElement('button');
+            var restBtn = document.createElement('button');
+            var addBtn = document.createElement('button');
+            startBtn.innerHTML = '开始';
+            stopBtn.innerHTML = '暂停';
+            restBtn.innerHTML = '重新开始';
+            addBtn.innerHTML = '增加难度';
+            div.style.width = this.width * 25.5 + 'px';
+            var ul = document.createElement('ul');
+            var li = document.createElement('li');
+            var rows = this.width;
+            var cols = this.height;
+            while (rows-- > 0) {
+                ul.appendChild(li.cloneNode(true));
+            }
+            while (cols-- > 0) {
+                div.appendChild(ul.cloneNode(true));
+                div.appendChild(startBtn)
+                div.appendChild(stopBtn)
+                div.appendChild(restBtn)
+                div.appendChild(addBtn)
+            }
+            document.body.appendChild(div);
+            this.rest();
+            return this;
+        },
+        rest: function () {
+            this.list = document.getElementsByTagName('li');
+            [].forEach.call(this.list, function (li, i) {
+                li.id = 'li_' + (i + 1);
+            });
+            for (var k = 0; k < this.list.length; k++) {
+                this.list[k].className = '';
+            }
+            this.body = [];
+            this.body.push(this.random());
+            this.random();
+            return this;
+        },
+        random: function () {
+            var num, item;
+            do {
+                num = Math.floor((this.count - 1) * Math.random()) + 1;
+                item = document.getElementById('li_' + num);
+            } while (this.body.indexOf(item) > -1);
+
+            this.addClass(item);
+            return item;
+        },
+        addClass: function (item) {
+            item.className = 'red';
+        },
+        removeClass: function (item) {
+            item.className = '';
+        },
+        getDOm: function (item) {
+            var num = item.id.split('_').pop() - 0;
+            var last = num;
+            switch (this.direction) {
+                case 1:
+                    num--;//向左
+                    num = num % this.width == 0 ? num + this.width : num;
+                    break;
+                case 2:
+                    num = num % this.width == 0 ? num - this.width + 1 : num + 1;
+                    break;
+                case 3:
+                    num = num / this.width <= 1 ? this.count - this.width + num : num - this.width;
+                    break;
+                case 4:
+                    num = num + this.width;
+                    num = num > this.count ? num - this.count : num;
+                    break;
+            }
+            var next = num;
+            // 判断碰墙
+            if (
+                    last < this.width + 1 && next > this.count - this.width ||
+                    last > this.count - this.width && next < this.width + 1 ||
+                    last == parseInt(last / this.width) * this.width + 1 && next == parseInt(last / this.width) * this.width + this.width ||
+                    last == parseInt(last / this.width) * this.width &&
+                    next == parseInt(last / this.width - 1) * this.width + 1
+
+            ) {
+                document.body.style.backgroundColor = 'black';
+                clearInterval(this.timer);
+            }
+            return document.getElementById('li_' + num);
+        },
+        move: function () {
+            var next = this.getDOm(this.body[0]);
+            if (this.body.indexOf(next) > -1) {
+                document.body.style.backgroundColor = 'black';
+                clearInterval(this.timer);
+            } else {
+                this.body.unshift(next);
+                if (!next.className.length) {
+                    this.addClass(this.body[0]);
+                    this.removeClass(this.body.pop());
+                } else {
+                    this.random();
+                }
+            }
+        },
+        start: function () {
+            document.body.style.backgroundColor = 'white';
+            clearInterval(this.timer);
+            this.timer = setInterval(this.move.bind(this), this.speed);
+            return this;
+        }
+    }
+    window.onload = function () {
+        var btns = document.getElementsByTagName('button');
+        var snake = new Snake(50, 30).init();
+        btns[0].onclick = function () {
+            snake.start();
+        }
+        btns[1].onclick = function () {
+            clearInterval(snake.timer);
+        }
+        btns[2].onclick = function () {
+            snake.rest();
+	    snake.speed = 200;
+            snake.start();
+        }
+        btns[3].onclick = function () {
+            snake.speed = snake.speed / 1.5;
+            snake.start();
+        }
+        //键盘点击按钮设置
+        document.onkeydown = function (e) {
+            var num = e.keyCode;
+            switch (num) {
+                case 37:
+                    if (snake.direction != 2) {
+                        snake.direction = 1;
+                    }
+                    break;
+                case 38:
+                    if (snake.direction != 4) {
+                        snake.direction = 3;
+                    }
+                    break;
+                case 39:
+                    if (snake.direction != 1) {
+                        snake.direction = 2;
+                    }
+                    break;
+                case 40:
+                    if (snake.direction != 3) {
+                        snake.direction = 4;
+                    }
+                    break;
+            }
+            e.preventDefault();
+        }
+    }
+
+</script>

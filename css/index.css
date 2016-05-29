@@ -1,0 +1,1055 @@
+/*�������ֿ�ʼ*/
+.nav {
+    width: 100%;
+    height: 65px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.nav-tit {
+    padding-top: 23px;
+}
+
+.nav-tit ul {
+    font-size: 18px;
+    font-family: arial;
+    padding-left: 20%;
+    list-style: none;
+
+}
+
+.nav-tit ul li {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    float: left;
+    position: relative;
+}
+
+.nav-tit ul a {
+    width: 100px;
+    height: 40px;
+    display: block;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    z-index: 1;
+}
+
+.nav-tit ul div {
+    width: 110px;
+    height: 40px;
+    position: absolute;
+    top: 40px;
+    left: 0px;
+}
+
+/*����ͼƬ����*/
+.nav-tit ul li:nth-of-type(1) div {
+    background: url("../images/nav01.png") no-repeat 0px 0px;
+    background-size: 110px 40px;
+    top: 0;
+}
+
+.nav-tit ul li:nth-of-type(2) div {
+    background: url("../images/nav02.png") no-repeat 0px 0px;
+    background-size: 110px 40px;
+}
+
+.nav-tit ul li:nth-of-type(3) div {
+    background: url("../images/nav03.png") no-repeat 0px 0px;
+    background-size: 110px 40px;
+}
+
+.nav-tit ul li:nth-of-type(4) div {
+    background: url("../images/nav04.png") no-repeat 0px 0px;
+    background-size: 110px 40px;
+}
+
+.nav-tit ul li:nth-of-type(5) div {
+    background: url("../images/nav05.png") no-repeat 0px 0px;
+    background-size: 110px 40px;
+}
+
+.nav-tit ul li:nth-of-type(6) div {
+    background: url("../images/nav06.png") no-repeat 0px 0px;
+    background-size: 110px 40px;
+}
+
+.nav-tit ul > li:nth-of-type(1) > a {
+    background: url("../images/nav001.png") no-repeat 0px 37px;
+}
+
+.nav-tit ul > li:nth-of-type(2) > a {
+    background: url("../images/nav002.png") no-repeat 0px 37px;
+}
+
+.nav-tit ul > li:nth-of-type(3) > a {
+    background: url("../images/nav003.png") no-repeat 0px 37px;
+}
+
+.nav-tit ul > li:nth-of-type(4) > a {
+    background: url("../images/nav004.png") no-repeat 0px 37px;
+}
+
+.nav-tit ul > li:nth-of-type(5) > a {
+    background: url("../images/nav005.png") no-repeat 0px 37px;
+}
+
+.nav-tit ul > li:nth-of-type(6) > a {
+    background: url("../images/nav006.png") no-repeat 0px 37px;
+}
+
+/*ͼ�겿��*/
+.nav-pic {
+    width: 80px;
+    height: 45px;
+    padding: 21px 0 0 26px;
+    top: 5px;
+    right: 65px;
+}
+
+.nav-pic a {
+    width: 30px;
+    height: 30px;
+    padding-left: 5px;
+    float: left;
+}
+
+.nav-pic a:nth-of-type(1) {
+    background: url("../images/nav-right1.png") no-repeat 0px 0px;
+}
+
+.nav-pic a:nth-of-type(1):hover {
+    background: url("../images/nav-right01.png") no-repeat 0px 0px;
+}
+
+.nav-pic a:nth-of-type(2) {
+    background: url("../images/nav-right2.png") no-repeat 0px 0px;
+}
+
+.nav-pic a:nth-of-type(2):hover {
+    background: url("../images/nav-right02.png") no-repeat 0px 0px;
+}
+
+/*��ҳ���ֿ�ʼ*/
+.face,
+.kill,
+.power,
+.resume,
+.blogs,
+.callMe {
+    width: 100%;
+    height: 710px;
+}
+
+.face-bgc2, .face-bgc1,
+.kill-bgc1, .kill-bgc2, .kill-bgc3,
+.power-bgc1, .power-bgc2, .power-bgc3,
+.resume-bgc1, .resume-bgc2, .resume-bgc3,
+.blogs-bgc1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.face {
+    background: #000 url("../images/face-bgc1.jpg") no-repeat center top;
+}
+
+.face-bgc1 {
+    background: url("../images/face-bgc2.png") no-repeat -100px -0px;
+}
+
+.face-bgc2 {
+    background: url("../images/face-bgc3.png") no-repeat;
+}
+
+/*��ҳ���ֽ���*/
+
+/*face�ҵ���־����*/
+.face-content,
+.kill-content,
+.power-content,
+.resume-content {
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    left: 55%;
+    top: -35px;
+    overflow: hidden;
+}
+
+.move-content {
+    width: 400px;
+    height: 333px;
+    position: absolute;
+}
+
+.face-cText,
+.kill-cText,
+.power-cText,
+.resume-cText {
+    width: 330px;
+    padding-top: 5px;
+    padding-left: 15px;
+    border-left: 1px solid #fff;
+    overflow: hidden;
+}
+
+.face-cText > p,
+.kill-cText > p,
+.power-cText > p,
+.resume-cText > p {
+    font-family: "arial";
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: bold;
+    text-indent: 2em;
+    color: #fff;
+}
+
+.face-cText > p:nth-of-type(2),
+.kill-cText > p:nth-of-type(4),
+.power-cText > p:nth-of-type(4),
+.resume-cText > p:nth-of-type(4) {
+    float: right;
+    padding-right: 30px;
+}
+
+.face-cIcon,
+.kill-cIcon,
+.power-cIcon,
+.resume-cIcon,
+.blogs-cIcon {
+    height: 30px;
+}
+
+.face-cIcon > a,
+.kill-cIcon > a,
+.power-cIcon > a,
+.resume-cIcon > a,
+.blogs-cIcon > a {
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: left;
+    margin-left: 30px;
+    position: relative;
+}
+
+.face-cIcon > a > img,
+.kill-cIcon > a > img,
+.power-cIcon > a > img,
+.resume-cIcon > a > img,
+.blogs-cIcon > a > img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.face-cIcon > a > img:hover,
+.kill-cIcon > a > img:hover,
+.power-cIcon > a > img:hover,
+.resume-cIcon > a > img:hover,
+.blogs-cIcon > a > img:hover {
+    opacity: 0;
+}
+
+/*face�ҵ���־�������*/
+
+/*face��Ʒ�����ֿ�ʼ*/
+.showreel {
+    width: 0px;
+    height: 100%;
+    background-color: rgba(205, 205, 205, 0.8);
+    background: url(../images/banner-bgc.png) no-repeat 0px 100px;
+    background-size: 640px 500px;
+    position: absolute;
+    right: 0;
+    /*overflow: hidden;*/
+}
+
+.showreel-bButton {
+    width: 60px;
+    height: 100px;
+    position: absolute;
+    z-index: 1;
+    left: -60px;
+    top: 50%;
+    margin-top: -50px;
+}
+
+.showreel-bButton img {
+    width: 60px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.showreel-bButton img:hover {
+    opacity: 0;
+}
+
+.showreel-bText {
+    width: 450px;
+    height: 300px;
+    background-color: #faffff;
+    position: absolute;
+    top: 210px;
+    left: 90px;
+    overflow: hidden;
+}
+
+.showreel-bText > ul {
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 20px;
+
+}
+
+.showreel-bText > ul > li {
+    width: 100%;
+    height: 40px;
+    margin-top: 8.5px;
+    padding-left: 10px;
+    background-color: #fe65ff;
+}
+
+.showreel-bText > ul > li > a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: arial;
+    line-height: 40px;
+    text-underline: none;
+    color: #fff;
+}
+
+/*face��Ʒ�����ֽ���*/
+
+/*ǰ�˼��ܲ��ֿ�ʼ*/
+.kill {
+    background: #262f37 url("../images/kill-bgc1.png") no-repeat center top;
+}
+
+.kill-bgc1 {
+    background: url("../images/kill-bgc2.png") no-repeat;
+}
+
+.kill-bgc2 {
+    background: url("../images/kill-bgc3.png") no-repeat;
+}
+
+.kill-bgc3 {
+    background: url("../images/kill-bgc4.png") no-repeat;
+}
+
+/*ǰ�˼��ܲ��ֽ���*/
+
+/*javascript���ֿ�ʼ*/
+.power {
+    background: #c6ba0e url("../images/power-bgc1.jpg") no-repeat center top;
+}
+
+.power-bgc1 {
+    background: url("../images/power-bgc2.png") no-repeat;
+}
+
+.power-bgc2 {
+    background: url("../images/power-bgc3.png") no-repeat;
+}
+
+/*javascript���ֽ���*/
+
+/*���˼������ֿ�ʼ*/
+.resume {
+    background: #1a899a url("../images/resume-bgc1.jpg") no-repeat center top;
+}
+
+.resume-bgc1 {
+    background: url("../images/resume-bgc2.png") no-repeat;
+}
+
+.resume-bgc2 {
+    background: url("../images/resume-bgc3.png") no-repeat;
+}
+
+/*���˼������ֽ���*/
+
+/*���ͼ���ʼ*/
+
+.blogs {
+    background: #ececec url("../images/blogs-bgc1.jpg") no-repeat center top;
+    background-size: 1366px 710px;
+}
+
+.blogs-main {
+    width: 820px;
+    height: 500px;
+    margin: 100px auto;
+}
+
+.blogs-title {
+    height: 39px;
+    font: 700 italic 32px/40px arial;
+    border-bottom: 2px solid #ff91aa;
+}
+
+.blogs-context {
+    overflow: hidden;
+}
+
+.blogs-context > ul {
+    width: 810px;
+    height: 366px;
+    margin-top: 30px;
+    margin-left: 5px;
+}
+
+.blogs-context > ul > li {
+    width: 150px;
+    height: 115px;
+    margin: 0px 12px 9px 0px;
+    float: left;
+    background-color: rgba(255, 192, 203, 1);
+}
+
+.blogs-context > ul > li:hover {
+    background-color: rgba(255, 192, 203, 0.3);
+}
+
+.blogs-context > ul > li > a {
+    display: block;
+    width: 150px;
+    height: 115px;
+    line-height: 113px;
+    position: relative;
+    font-family: xcy;
+    text-align: center;
+    background: url("../images/blogs-bgc.jpg") no-repeat 0px -30px;
+    background-size: 800px 600px;
+}
+
+.blogs-context > ul > li:nth-of-type(2) > a {
+    background-position: -150px -30px;
+}
+
+.blogs-context > ul > li:nth-of-type(3) > a {
+    background-position: -280px -30px;
+}
+
+.blogs-context > ul > li:nth-of-type(4) > a {
+    background-position: -400px -30px;
+}
+
+.blogs-context > ul > li:nth-of-type(5) > a {
+    background-position: -500px -30px;
+}
+
+.blogs-context > ul > li:nth-of-type(6) > a {
+    background-position: -0px -150px;
+}
+
+.blogs-context > ul > li:nth-of-type(7) > a {
+    background-position: -140px -150px;
+}
+
+.blogs-context > ul > li:nth-of-type(8) > a {
+    background-position: -280px -150px;
+}
+
+.blogs-context > ul > li:nth-of-type(9) > a {
+    background-position: -400px -150px;
+}
+
+.blogs-context > ul > li:nth-of-type(10) > a {
+    background-position: -500px -150px;
+}
+
+.blogs-context > ul > li:nth-of-type(11) > a {
+    background-position: -0px -250px;
+}
+
+.blogs-context > ul > li:nth-of-type(12) > a {
+    background-position: -140px -250px;
+}
+
+.blogs-context > ul > li:nth-of-type(13) > a {
+    background-position: -280px -250px;
+}
+
+.blogs-context > ul > li:nth-of-type(14) > a {
+    background-position: -400px -250px;
+}
+
+.blogs-context > ul > li:nth-of-type(15) > a {
+    background-position: -500px -250px;
+}
+
+.blogs-cIcon {
+    margin-top: 25px;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+}
+
+/*���ͼ�����*/
+
+/*callMe���ֿ�ʼ*/
+.callMe {
+    background-color: white;
+    overflow: hidden;
+    /*���䱳����Ч*/
+    background-color: rgba(245, 255, 131, 0.6);
+    animation: linear1 10s linear infinite;
+}
+
+.callMe-tittle > h3 {
+    width: 980px;
+    margin-top: 100px;
+    margin-left: 100px;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: normal;
+}
+
+.callMe-border {
+    width: 700px;
+    margin-left: 100px;
+    height: 2px;
+    list-style: none;
+    background-image: linear-gradient(
+            45deg,
+            black 0%,
+            pink 25%,
+            yellow 50%,
+            green 75%
+    )
+}
+
+/*���3dħ�����ֿ�ʼ*/
+.callMe-content-left {
+    width: 200px;
+    height: 200px;
+    margin-top: 250px;
+    margin-left: 250px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: animation1 15s linear infinite;
+}
+
+.callMe-content-left > div {
+    opacity: 0.5;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.callMe-content-left > p {
+    opacity: 0.8;
+    display: block;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 50px;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    transition: all 1s;
+}
+
+/*����*/
+.callMe-top {
+    background-color: pink;
+    transform: rotateX(90deg) translateZ(50px);
+}
+
+.callMe-top1 {
+    background-color: pink;
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.callMe-content-left:hover .callMe-top1 {
+    transform: rotateX(90deg) translateZ(300px) rotateZ(180deg);
+}
+
+/*����*/
+.callMe-bottom {
+    background-color: #281780;
+    transform: rotateX(-90deg) translateZ(50px);
+}
+
+.callMe-bottom1 {
+    background-color: #281780;
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+.callMe-content-left:hover .callMe-bottom1 {
+    transform: rotateX(-90deg) translateZ(300px) rotateZ(180deg);
+}
+
+/*���*/
+.callMe-left {
+    background-color: green;
+    transform: rotateY(90deg) translateZ(50px);
+}
+
+.callMe-left1 {
+    background-color: green;
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.callMe-content-left:hover .callMe-left1 {
+    transform: rotateY(90deg) translateZ(300px) rotateZ(180deg);
+}
+
+/*�ұ߲��ֿ�ʼ*/
+.callMe-right {
+    background-color: yellow;
+    transform: rotateY(-90deg) translateZ(50px);
+}
+
+.callMe-right1 {
+    background-color: yellow;
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.callMe-content-left:hover .callMe-right1 {
+    transform: rotateY(-90deg) translateZ(300px) rotateZ(180deg);
+}
+
+/*ǰ��*/
+.callMe-front {
+    background-color: #fe65ff;
+    transform: translateZ(50px);
+}
+
+.callMe-front1 {
+    background-color: #fe65ff;
+    transform: translateZ(100px);
+}
+
+.callMe-content-left:hover .callMe-front1 {
+    transform: translateZ(300px) rotateZ(180deg);
+}
+
+/*����*/
+.callMe-hehind {
+    background-color: #65ff47;
+    transform: translateZ(-50px);
+}
+
+.callMe-hehind1 {
+    background-color: #65ff47;
+    transform: translateZ(-100px);
+}
+
+.callMe-content-left:hover .callMe-hehind1 {
+    transform: translateZ(-300px) rotateZ(180deg);
+}
+
+/*����ħ������*/
+@keyframes animation1 {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+/*���䱳����Ч*/
+@keyframes linear1 {
+    0% {
+        background-color: rgba(245, 255, 131, 0.6);
+    }
+    50% {
+        background-color: rgba(134, 255, 212, 0.7);
+    }
+    100% {
+        background-color: rgba(245, 255, 131, 0.6);
+    }
+}
+
+/*���3dħ�����ֽ���*/
+/*callMe�ұ߲��ֿ�ʼ*/
+/*������Ϣ���ֿ�ʼ*/
+.callMe-content-right {
+    width: 500px;
+    margin-left: 250px;
+}
+
+.callMe-content-right > .callMe-mySelf > h3 {
+    font-size: 23px;
+    line-height: 40px;
+    font-weight: normal;
+    margin-top: 100px;
+}
+
+.callMe-content-right > .callMe-mySelf > span {
+    margin-top: 5px;
+    display: block;
+    height: 1px;
+    background-image: linear-gradient(135deg,
+    yellow 25%,
+    green 25%,
+    green 50%,
+    yellow 50%,
+    yellow 75%,
+    green 75%);
+    animation: blink 10s linear infinite;
+    background-size: 20px 20px;
+}
+
+.callMe-content-right > .callMe-mySelf > p {
+    font-size: 18px;
+    height: 36px;
+    line-height: 45px;
+    padding-left: 10px;
+}
+
+.callMe-content-right > .callMe-mySelf > p > span {
+    padding-left: 50px;
+}
+
+@keyframes blink {
+    from {
+    }
+    to {
+        background-position: 200px 0;
+    }
+}
+
+/*������Ϣ���ֽ���*/
+/*ʱ�Ӳ��ֿ�ʼ*/
+.callMe-clock {
+    width: 100px;
+    height: 100px;
+    border: 5px solid #ff9662;
+    border-radius: 55px;
+    position: relative;
+    margin-top: 30px;
+}
+
+.callMe-line {
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #cc1e38;
+    margin-left: -1px;
+}
+
+.callMe-line1 {
+    transform: rotateZ(30deg);
+}
+
+.callMe-line2 {
+    transform: rotateZ(60deg);
+}
+
+.callMe-line3 {
+    transform: rotateZ(90deg);
+}
+
+.callMe-line4 {
+    transform: rotateZ(120deg);
+}
+
+.callMe-line5 {
+    transform: rotateZ(150deg);
+}
+
+.callMe-line6 {
+    transform: rotateZ(180deg);
+}
+
+.callMe-line3, .callMe-line6 {
+    width: 4px;
+    margin-left: -2px;
+    background: #AAA
+}
+
+.callMe-cover {
+    width: 80px;
+    height: 80px;
+    background: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -40px 0 0 -40px;
+}
+
+.callMe-dotted {
+    width: 10px;
+    height: 10px;
+    background: #000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -5px 0 0 -5px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.callMe-hour {
+    width: 4px;
+    height: 25px;
+    background: #2a8b64;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -2px;
+    margin-top: -25px;
+    transform-origin: center bottom;
+    animation: move1 120s linear infinite;
+}
+
+.callMe-minutes {
+    width: 3px;
+    height: 30px;
+    background: #8b0a0b;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -1.5px;
+    margin-top: -30px;
+    transform-origin: center bottom;
+    animation: move1 60s linear infinite;
+}
+
+.callMe-seconds {
+    width: 2px;
+    height: 35px;
+    background: #ff15d0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -1px;
+    margin-top: -35px;
+    transform-origin: center bottom;
+    /*�������ֳ�60���*/
+    animation: move1 5s linear infinite;
+}
+
+/* ����*/
+@keyframes move1 {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+/*ʱ�Ӳ��ֽ���*/
+
+/*������ϵ�ҿ�ʼ*/
+.callMe-link {
+    width: 300px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+    color: #000;
+    margin-top: 60px;
+    margin-left: 50px;
+    border-radius: 10px;
+    border: 2px solid #7d7d7d;
+    box-shadow: 5px 5px 0px #000;
+}
+
+/*������ϵ�ҽ���*/
+/*��������ڶ����鿪ʼ*/
+.callMe-click {
+    width: 400px;
+    font-weight: 700;
+    margin-left: 75px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 60px;
+    transition: all 1s;
+}
+
+.callMe-click:hover {
+    margin-left: 0px;
+    letter-spacing: 10px;
+    font-size: 16px;
+    color: #1a899a;
+}
+
+/*callMe���ֽ���*/
+
+/*��������ģ�鿪ʼ*/
+.experience {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 0px;
+    background-color: #000;
+}
+
+.experience-main {
+    overflow: visible;
+    color: #fff;
+}
+
+.experience-icon {
+    width: 135px;
+    height: 60px;
+    left: 50%;
+    margin-left: -67px;
+    margin-top: -60px;
+    cursor: pointer;
+}
+
+.experience-main > h3 {
+    width: 100%;
+    font-size: 24px;
+    font-family: arial;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+
+.experience-self {
+    width: 33%;
+    height: 80px;
+}
+
+.experience-self-Logo {
+    position: absolute;
+    top: 80px;
+    left: 250px;
+    width: 150px;
+    height: 120px;
+    background: url("../images/experience-selfL.jpg") no-repeat center center;
+    background-size: 150px 150px;
+}
+
+.experience-selfC {
+    border-left: 2px solid #FFFF00;
+    border-right: 2px solid #FFFF00;
+    text-align: center;
+}
+
+.experience-selfR{
+    text-align: center;
+    line-height: 25px;
+}
+
+/*��������ģ�����*/
+
+/*blackHold*/
+/*�����ڶ����鿪ʼ*/
+
+.blackHole {
+    position: fixed;
+    display: block;
+    width: 0px;
+    height: 0px;
+    bottom: 0;
+    z-index: 1;
+}
+
+/*ÿ�����鱻�ڶ����ߵ����ÿ�ʼ*/
+.callMe {
+    transition: all 3s 2s;
+}
+
+.blogs {
+    transition: all 3s 5s;
+}
+
+.resume {
+    transition: all 3s 7s;
+}
+
+.power {
+    transition: all 3s 9s;
+}
+
+.kill {
+    transition: all 3s 11s;
+}
+
+.face {
+    transition: all 3s 13.5s;
+}
+
+.nav {
+    transition: all 3s 13.5s;
+}
+
+/*ÿ�����鱻�ڶ����ߵ����ý���*/
+
+/*����*/
+@keyframes rotate1 {
+    0% {
+        width: 10px;
+        height: 10px;
+        left: 750px;
+        top: 350px;
+        transform: rotate(0deg);
+    }
+    8% {
+        width: 1000px;
+        height: 1000px;
+        left: 250px;
+        top: -50px;
+        transform: rotate(1000deg);
+    }
+    80% {
+        width: 1000px;
+        height: 1000px;
+        left: 250px;
+        top: -50px;
+        transform: rotate(12000deg);
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+        left: 750px;
+        top: 350px;
+        transform: rotate(8000deg);
+    }
+}
+
+@keyframes stop1 {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 0px;
+    }
+}
+
+/*�����ڶ��������*/
+/*����ģ�鿪ʼ*/
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/*����ģ�����*/

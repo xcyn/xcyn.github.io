@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<title></title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+
+<body>
+	<div id="banner">
+		<div id="img_list" class="clearfix">
+			<img src="images/index-background1.jpg"/>
+            <img src="images/index-background2.jpg"/>
+            <img src="images/index-background3.jpg"/>
+		</div>
+		<div id="num">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+        <ul>
+    	<li><a href="index.html"><img src="images/index-bottom1.png"></a><span>首页</span></li>
+        <li><a href="photo.html"><img src="images/index-bottom2.png"></a><span>海贝相册</span></li>
+        <li><a href="brand.html"><img src="images/index-bottom3.png"></a><span>关于海贝</span></li>
+        <li><a href="join.html"><img src="images/index-bottom4.png"></a><span>加盟条件</span></li>
+        <li><a href="index.html"><img src="images/index-bottom5.png"></a><span>心族系列</span></li>
+        <li><a href="index.html"><img src="images/index-bottom6.png"></a><span>领取优惠券</span></li>
+        <li><a href="index.html"><img src="images/index-bottom7.png"></a><span>在线预订</span></li>
+        <li><a href="contact.html"><img src="images/index-bottom8.png"></a><span>联系我们</span></li>
+    </ul>
+	</div>
+</body>
+</html>
+<script>
+var list = document.getElementById('img_list');
+var num = document.getElementById('num');
+var img  = list.getElementsByTagName('img');
+var span  = num.getElementsByTagName('span');
+var len = img.length;
+span[0].className = 'hover';
+var banner=document.getElementById('banner');
+var bannerlist=document.getElementById('img_list');
+var i = 1;
+function toggle_image()
+{
+	var left=document.documentElement.clientWidth||document.body.clientWidth;
+	var top=bannerlist.offsetHeight;
+	banner.style.width=left+'px';
+	banner.style.height=top+'px';
+	list.style.width=left*len+'px';
+	for(o=0;o<len;o++)
+	{
+		img[o].style.width=left+'px';
+	}
+	i = (i == len) ? 0:i;
+	for(var j = 0; j < len; j++)
+	{
+		span[j].className = '';
+	}
+	span[i].className = 'hover';
+	var left=document.documentElement.clientWidth||document.body.clientWidth;
+	list.style.left = i*-left+'px';
+	i++;
+}
+var timer = setInterval(toggle_image,2000);
+</script>
