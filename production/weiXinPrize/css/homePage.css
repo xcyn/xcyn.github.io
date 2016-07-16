@@ -1,0 +1,568 @@
+/*主页部分开始*/
+html, body, .main {
+    width: 100%;
+    height: 100%;
+
+}
+
+/*上部部分开始*/
+.main {
+    /*display: none;*/
+    background: url("../images/guagualeBgc.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.main-light {
+    width: 100%;
+    height: 100%;
+    background: url("../images/bgc-light1.png") no-repeat center
+    /*animation: changeBgc 2s infinite;*/
+    /*background-size: 100% 75%;*/
+}
+
+.main-top {
+    width: 100%;
+    height: 6rem;
+    position: absolute;
+    top: 0.8rem;
+    background: url("../images/guagualeXiaolingdang.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+.main-top-scratchCard {
+    width: 100%;
+    height: 1.9rem;
+    background: url("../images/guagualeTop.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+.main-top-message {
+    width: 3.65rem;
+    height: 1.06rem;
+    margin: 0 auto;
+    margin-top: -0.3rem;
+    background: url("../images/guagualeBottom.png") no-repeat center;
+    background-size: 100% 100%;
+    padding-top: 0.15rem;
+    text-align: center;
+}
+
+.main-top-message > span {
+    font-size: 0.25rem;
+}
+
+/*底部部分开始*/
+.main-bottom {
+    width: 100%;
+    height: 5.2rem;
+    background: url("../images/bgcBottom.png") no-repeat center;
+    background-size: 100% 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.main-bottom-goodLuck {
+    width: 5.29rem;
+    height: 4.05rem;
+    margin: 0 auto;
+    background: url("../images/huachulai.png") no-repeat bottom;
+    background-size: 100% 100%;
+    position: relative;
+    top: -0.9rem;
+}
+
+/*领奖按钮部分*/
+.main-bottom-goodLuck-btn {
+    width: 3rem;
+    height: 1.35rem;
+    /*background: url("../images/scratch-off.png") no-repeat;*/
+    position: absolute;
+    left: 1.18rem;
+    bottom: 1.4rem;
+}
+
+.prizeContent {
+    width: 100%;
+    height: 100%;
+    font-size: 0.16rem;
+    color: #666;
+    position: absolute;
+    top: 19%;
+    text-align: center;
+}
+
+.playAgain, .playPrize {
+    width: 1.2rem;
+    height: 0.52rem;
+    background: url("../images/acceptThePrize.png") no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 55%;
+    left: 62%;
+    margin-left: -1rem;
+    display: none;
+}
+
+.playAgain {
+    background: url("../images/playAgin.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+/*挂挂乐特效开始*/
+#myCanvas {
+    /*border: 1px solid green;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+@media screen and (min-width: 320px) {
+    /*指定区间之后我们是不是可以定义在这个区间内的样式*/
+    #myCanvas {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    /*指定区间之后我们是不是可以定义在这个区间内的样式*/
+    #myCanvas {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/*挂挂乐特效结束*/
+
+/*领奖部分开始*/
+.main-prize-button {
+    position: relative;
+}
+
+.main-prize-myPrize, .main-prize-myRule, .main-prize-record {
+    position: absolute;
+    width: 1.6rem;
+    height: 0.65rem;
+    margin-top: -0.3rem;
+}
+
+.main-prize-myPrize {
+    left: 0.7rem;
+    background: url("../images/myPrize-button.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.main-prize-myRule {
+    left: 2.35rem;
+    top: 0.3rem;
+    background: url("../images/myRule-button.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.main-prize-record {
+    left: 4.05rem;
+    background: url("../images/myRecord-button.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+/*领奖部分结束*/
+
+/*主页部分结束*/
+
+/*我的奖品部分开始*/
+/*奖品标题部分开始*/
+.myPrize, .myRule, .WinningRecord, .informationDelivery, .scene-Prize, .virtual-prize {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    background-color: #f6f6f8;
+    /*display: none;*/
+}
+
+.myPrize, .myRule, .WinningRecord, .informationDelivery, .scene-Prize {
+    /*display: none;*/
+}
+
+.myPrize {
+    overflow-y: auto;
+    padding-bottom: 1rem;
+}
+
+.myPrize > h3, .myRule > h3, .WinningRecord > h3, .informationDelivery > h3, .scene-Prize > h3, .virtual-prize > h3 {
+    padding-top: 0.55rem;
+    padding-bottom: 0.5rem;
+    width: 100%;
+    font-weight: 700;
+    background-color: #f6f6f8;
+    font-size: 0.33rem;
+    text-align: center;
+    color: #A9212D;
+}
+
+/*奖品标题部分结束*/
+.prize-content {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 5.6rem;
+    color: gray;
+}
+
+.prize-content > div {
+    overflow: hidden;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0.4rem;
+}
+
+
+.prize-content-img {
+    width: 0.9rem;
+    height: 100%;
+    padding-top: 0.2rem;
+    padding-left: 0.25rem;
+}
+
+.prize-content-img > img {
+    width: 0.9rem;
+    height: 100%;
+}
+
+.prize-content-main {
+    padding-top: 0.3rem;
+    padding-left: 0.2rem;
+}
+
+.prize-content-main > p {
+    padding-left: 0.3rem;
+    font-size: 0.26rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.prize-content-arrows {
+    width: 0.15rem;
+    height: 0.29rem;
+    background: url("../images/arrow.png") no-repeat center center;
+    background-size: 100% 100%;
+    margin-top: 0.65rem;
+    margin-right: 0.2rem;
+}
+
+/*获奖信息*/
+.prize-Awards {
+    font-size: 0.22rem;
+    padding-left: 0.3rem;
+    padding-top: 0.15rem;
+    padding-bottom: 0.4rem;
+    color: #99999b;
+}
+
+/*关闭按钮*/
+.prize-close {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+.prize-close > a {
+    font-size: 0.34rem;
+    height: 1rem;
+    line-height: 1rem;
+    font-weight: 600;
+    padding-top: 0.1rem;
+    width: 100%;
+    padding: 0;
+    background-color: #c02524;
+    color: #fff;
+    border-radius: 0;
+}
+
+/*.prize-close > a > div {*/
+/*width: 60%;*/
+/*margin: 0 auto;*/
+/*}*/
+
+.prize-close > a img {
+    width: 0.3rem;
+    height: 0.3rem;
+}
+
+.prize-close-btn {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+
+/*奖品内容部分开始*/
+
+/*奖品内容部分结束*/
+
+/*我的奖品部分结束*/
+
+/*活动规则开始*/
+.rule-main {
+    width: 5.6rem;
+    margin: 0 auto;
+    font-size: 0.25rem;
+    color: #666;
+    line-height: 0.4rem;
+}
+
+/*活动规则结束*/
+
+/*中奖纪录开始*/
+.winnngMain {
+    width: 5.8rem;
+    margin: 0 auto;
+}
+
+.winnngMain > p {
+    font-size: 0.25rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    background-color: #fff;
+    margin-bottom: 0.5rem;
+    padding-left: 0.25rem;
+}
+
+.Winning-img {
+    width: 2.6rem;
+    margin: 0 auto;
+}
+
+.Winning-img > img {
+    width: 100%;
+    height: 100%;
+}
+
+/*中奖纪录结束*/
+
+/*提交页面部分开始*/
+.perfect-information {
+    width: 100%;
+}
+
+.perfect-information > h6 {
+    color: #a6a6a8;
+    padding-left: 0.3rem;
+    font-size: 0.28rem;
+    line-height: 0.5rem;
+    font-weight: 400;
+    padding-top: 0.5rem;
+    padding-bottom: 0.05rem;
+}
+
+.info-content {
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    overflow: hidden;
+}
+
+.info-content > label {
+    width: 100%;
+    padding-left: 0.3rem;
+    margin: 0 auto;
+    font-size: 0.28rem;
+    font-weight: 500;
+    display: block;
+    color: #000;
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+}
+
+
+
+.perfect-information li {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    background-color: #e1e1e1;
+    height: 0.02rem;
+    margin-left: 0.3rem;
+}
+
+.info-content input {
+    font-size: 0.28rem;
+    color: #000;
+    padding-left: 0.6rem;
+}
+
+.info-content .info-content-phone {
+    padding-left: 0.3rem;
+}
+
+/*提交页面部分结束*/
+
+/*现场奖品部分开始*/
+.prize-img {
+    width: 2.6rem;
+    margin: 0 auto;
+}
+
+.prize-img > img {
+    width: 100%;
+    height: 100%;
+}
+
+.scene-2Dbarcode, .scene-youKnow {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    margin-top: 0.3rem;
+    font-size: 0.25rem;
+}
+
+.scene-2Dbarcode > h3, .scene-youKnow > h3 {
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    padding-left: 0.3rem;
+    font-weight: 400;
+    color: #a6a6a8;
+    border-top: 1px solid #d9d9db;
+    border-bottom: 1px solid #d9d9db;
+}
+
+.scene-2Dbarcode-img {
+    width: 3rem;
+    margin: 0 auto;
+}
+
+.scene-2Dbarcode-img > img {
+    width: 100%;
+    height: 100%;
+}
+
+/*现场领奖须知*/
+.scene-youKnow-rule {
+    padding-left: 0.3rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    line-height: 0.45rem;
+    font-size: 0.18rem;
+}
+
+/*现场奖品部分结束*/
+
+/*虚拟奖品开始*/
+
+/*奖品图片部分*/
+.virtual-prize {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 100%;
+    background-color: #f6f6f8;
+}
+
+.virtual-prize-img {
+    width: 2.6rem;
+    height: 2.6rem;
+    margin: 0 auto;
+    position: relative;
+    background-color: #fff;
+}
+
+.virtual-prize-img > img {
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    margin-top: -30%;
+}
+
+/*虚拟代码输入部分*/
+.virtual-prize-content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.virtual-prize-content > h3 {
+    font-size: 0.35rem;
+    color: #a6a6a8;
+    font-weight: 400;
+    padding-top: 0.15rem;
+    padding-left: 0.3rem;
+    padding-bottom: 0.15rem;
+}
+
+.virtual-prize-content > input {
+    width: 100%;
+    height: 100%;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left: 0.3rem;
+    font-size: 0.25rem;
+    font-size: 0.35rem;
+    font-weight: 700;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+/*虚拟奖品结束*/
+
+/*css3动画区开始*/
+
+/*背景图交替变换*/
+@-webkit-keyframes changeBgc {
+    0% {
+        background: url("../images/bgc-light1.png") no-repeat center;
+    }
+    50% {
+        background: url("../images/bgc-light2.png") no-repeat center;
+    }
+    100% {
+        background: url("../images/bgc-light1.png") no-repeat center;
+    }
+}
+
+@keyframes changeBgc {
+    0% {
+        background: url("../images/bgc-light1.png") no-repeat center;
+    }
+    50% {
+        background: url("../images/bgc-light2.png") no-repeat center;
+    }
+    100% {
+        background: url("../images/bgc-light1.png") no-repeat center;
+    }
+}
+
+@-moz-keyframes changeBgc /* Firefox */
+{
+    0% {
+        background: url("../images/bgc-light1.png") no-repeat center;
+    }
+    50% {
+        background: url("../images/bgc-light2.png") no-repeat center;
+    }
+    100% {
+        background: url("../images/bgc-light1.png") no-repeat center;
+    }
+}
+
+@-o-keyframes changeBgc /* Opera */
+{
+    0% {
+        background: url("../images/bgc-light1.png") no-repeat center;
+    }
+    50% {
+        background: url("../images/bgc-light2.png") no-repeat center;
+    }
+    100% {
+        background: url("../images/bgc-light1.png") no-repeat center;
+    }
+}
+
+/*css3动画区结束*/

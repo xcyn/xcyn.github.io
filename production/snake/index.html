@@ -2,22 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <title>贪吃蛇</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
-        body{
+
+        body {
             overflow: hidden;
         }
 
         div {
-            overflow: hidden;
             margin: 0 auto;
             position: relative;
-            background: url("images/snakeBgc.jpg");
-            background-size: 100% 100%;
+            background: url("images/snakeBgc.jpg") center center;
+            background-size: cover;
         }
 
         ul {
@@ -47,30 +49,32 @@
             border-radius: 10px;
             box-shadow: 5px 6px 0 #000;
             outline-style: none;
+            font: 700 16px/50px "simsun";
         }
 
         button:nth-of-type(1) {
             background-color: pink;
-            font: 700 16px/50px "simsun";
             top: 10%;
         }
 
         button:nth-of-type(2) {
             background-color: yellow;
-            font: 700 16px/50px "simsun";
             top: 20%;
         }
 
         button:nth-of-type(3) {
             background-color: yellow;
-            font: 700 16px/50px "simsun";
             top: 30%;
         }
 
         button:nth-of-type(4) {
             background-color: yellow;
-            font: 700 16px/50px "simsun";
             top: 40%;
+        }
+
+        button:nth-of-type(5) {
+            background-color: yellow;
+            top: 50%;
         }
 
         button:nth-of-type(1):hover {
@@ -92,11 +96,96 @@
             background-color: #000;
             color: #fff;
         }
+
+        /*移动端进行设配*/
+        @media (max-width: 640px) {
+            section {
+                background-color: yellow;
+            }
+
+            h3 {
+                width: 100%;
+                text-align: center;
+                font-size: 0.5rem;
+                padding-top: 10%;
+                padding-bottom: 10%;
+            }
+
+            ul {
+                width: 6.4rem;
+            }
+
+            li {
+                width: 0.6rem;
+                height: 0.6rem;
+                float: left;
+                border: 1px solid #ccc;
+            }
+
+            div {
+                width: 100%;
+                height: 100%;
+            }
+
+            button {
+                position: absolute;
+                width: 20%;
+                height: 0.5rem;
+                right: 0px;
+                border-radius: 0.1rem;
+                box-shadow: 0.05rem 0.06rem 0 #000;
+                outline-style: none;
+                font: 700 0.12rem/0.5rem "simsun";
+            }
+
+            button:nth-of-type(1) {
+                top: 100%;
+                left: 0;
+            }
+
+            button:nth-of-type(2) {
+                top: 100%;
+                left: 20%;
+            }
+
+            button:nth-of-type(3) {
+                top: 100%;
+                left: 40%;
+            }
+
+            button:nth-of-type(4) {
+                top: 100%;
+                left: 60%;
+            }
+
+            button:nth-of-type(5) {
+                top: 100%;
+                left: 80%;
+            }
+        }
     </style>
+    <script>
+        (function (b, c) {
+            var d = b.documentElement,
+                    resizeEvt = 'orientationchange' in c ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var a = d.clientWidth;
+                        if (!a) return;
+                        d.style.fontSize = (20 * (a / 640)) > 100 ? 100 + "px" : (100 * (a / 640)) + 'px'
+                    },
+                    anime = c.requestAnimationFrame || c.webkitRequestAnimationFrame || c.mozRequestAnimationFrame || c.oRequestAnimationFrame ||
+                            function (e) {
+                                return setTimeout(e, 16.67)
+                            };
+            if (!b.addEventListener) return;
+            c.addEventListener(resizeEvt, recalc, false);
+            b.addEventListener('DOMContentLoaded', recalc, false)
+        })(document, window);
+    </script>
 </head>
 <body>
+<section id="snakeTitle"></section>
 <audio src="music/Pitbull - Bon, Bon.mp3" autoplay></audio>
-
 </body>
 </html>
 <script>
@@ -107,7 +196,12 @@
         this.body = [];
         this.direction = 1;
         this.timer = null;
-        this.speed = 200;
+        if(window.innerWidth > 640){
+            this.speed = 200;
+        }else{
+            this.speed = 500;
+        }
+
         this.list = null;
         this.count = width * height;
     }
@@ -119,11 +213,21 @@
             var stopBtn = document.createElement('button');
             var restBtn = document.createElement('button');
             var addBtn = document.createElement('button');
+            var subBtn = document.createElement('button');
             startBtn.innerHTML = '开始';
             stopBtn.innerHTML = '暂停';
             restBtn.innerHTML = '重新开始';
             addBtn.innerHTML = '增加难度';
-            div.style.width = this.width * 25.5 + 'px';
+            subBtn.innerHTML = '减少难度';
+            console.log(window.innerWidth)
+            if (window.innerWidth > 640) {
+                div.style.width = this.width * 25.5 + 'px';
+            } else {
+                document.getElementById('snakeTitle').innerHTML = '<h3>熊川宇版贪吃蛇</h3>'
+                div.style.width = '100%'
+                div.style.height = '100%'
+            }
+
             var ul = document.createElement('ul');
             var li = document.createElement('li');
             var rows = this.width;
@@ -137,6 +241,7 @@
                 div.appendChild(stopBtn)
                 div.appendChild(restBtn)
                 div.appendChild(addBtn)
+                div.appendChild(subBtn)
             }
             document.body.appendChild(div);
             this.rest();
@@ -150,6 +255,7 @@
             for (var k = 0; k < this.list.length; k++) {
                 this.list[k].className = '';
             }
+            ;
             this.body = [];
             this.body.push(this.random());
             this.random();
@@ -161,7 +267,6 @@
                 num = Math.floor((this.count - 1) * Math.random()) + 1;
                 item = document.getElementById('li_' + num);
             } while (this.body.indexOf(item) > -1);
-
             this.addClass(item);
             return item;
         },
@@ -229,7 +334,11 @@
     }
     window.onload = function () {
         var btns = document.getElementsByTagName('button');
-        var snake = new Snake(50, 30).init();
+        if (window.innerWidth > 640) {
+            var snake = new Snake(50, 30).init();
+        } else {
+            var snake = new Snake(10, 10).init();
+        }
         btns[0].onclick = function () {
             snake.start();
         }
@@ -238,12 +347,43 @@
         }
         btns[2].onclick = function () {
             snake.rest();
-	    snake.speed = 200;
+            snake.speed = 200;
             snake.start();
         }
         btns[3].onclick = function () {
             snake.speed = snake.speed / 1.5;
             snake.start();
+        }
+        btns[4].onclick = function () {
+            snake.speed = snake.speed * 1.5;
+            snake.start();
+        }
+
+        //移动端点击移动特殊处理
+        var divs = document.getElementsByTagName('div');
+        var div = divs[0];
+        var h3 = document.getElementsByTagName('h3')[0];
+        var liW = document.getElementsByTagName('li')[0].offsetWidth;
+        var liH = document.getElementsByTagName('li')[0].offsetHeight;
+        console.log(h3.offsetHeight)
+        console.log(liW)
+        console.log(liH)
+        if(window.innerWidth < 640){
+            div.onclick = function(e){
+                var divX = e.clientX;
+                var divY = e.clientY - div.offsetTop;
+                console.log(divX)
+                console.log(divY)
+                if(divX > liW * 2 && divX < liW * 8 && divY > 0 && divY < liH * 4){
+                    snake.direction = 3;
+                }else if(divX > 0 && divX < liW * 4 && divY > liH * 2 && divY < liH * 8){
+                    snake.direction = 1;
+                }else if(divX > liW * 2 && divX < liW * 8 && divY > liH * 6 && divY < liH * 10){
+                    snake.direction = 4;
+                }else{
+                    snake.direction = 2;
+                }
+            }
         }
         //键盘点击按钮设置
         document.onkeydown = function (e) {
