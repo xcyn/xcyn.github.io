@@ -347,7 +347,11 @@
         }
         btns[2].onclick = function () {
             snake.rest();
-            snake.speed = 200;
+            if(window.innerWidth > 640){
+                this.speed = 200;
+            }else{
+                this.speed = 500;
+            }
             snake.start();
         }
         btns[3].onclick = function () {
