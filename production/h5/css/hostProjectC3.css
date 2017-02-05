@@ -1,0 +1,559 @@
+/*动画区块*/
+/*公用动画*/
+/*箭头呼吸闪烁*/
+@-webkit-keyframes arrowsBlink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes arrowsBlink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+/*标题整体淡入*/
+
+.titleFadeIn {
+    -webkit-animation: fadeIn 0.5s ease both;
+    -moz-animation: fadeIn 0.5s ease both;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+/*蓝色背景换黑色背景图*/
+
+.changeFixed-arrows {
+    background: url("../images/xcyScreen-four-icon.png") no-repeat !important;
+    background-size: 0.64rem 0.3rem !important;
+}
+
+/*音乐背景图处理*/
+
+@-webkit-keyframes fixed-music-My {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes fixed-music-My {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    50% {
+        -moz-transform: rotate(360deg);
+    }
+    100% {
+        -moz-transform: rotate(0deg);
+    }
+}
+
+/*第一屏动画*/
+/*下部分淡入*/
+.screen-one-fadeIn {
+    -webkit-animation: fadeIn 1s ease both;
+    -moz-animation: fadeIn 1s ease both;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+/*上部分顶部淡入*/
+.screen-one-topFadeIn {
+    -webkit-animation: screen-one-topFadeIn 1s ease both;
+    -moz-animation: screen-one-topFadeIn 1s ease both;
+}
+
+@-webkit-keyframes screen-one-topFadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-2000px)
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translateY(30px)
+    }
+    80% {
+        -webkit-transform: translateY(-10px)
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes screen-one-topFadeIn {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(-2000px)
+    }
+    60% {
+        opacity: 1;
+        -moz-transform: translateY(30px)
+    }
+    80% {
+        -moz-transform: translateY(-10px)
+    }
+    100% {
+        -moz-transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*第二屏动画*/
+/*字体图标不停闪烁*/
+.screen-two-blink {
+    -webkit-animation: screen-two-blink 3s .7s ease both infinite;
+    -moz-animation: screen-two-blink 3s .7s ease both infinite;
+}
+
+@-webkit-keyframes screen-two-blink {
+    0%, 50%, 100% {
+        opacity: 0.3;
+    }
+    25%, 75% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes screen-two-blink {
+    0%, 50%, 100% {
+        opacity: 0.3;
+    }
+    25%, 75% {
+        opacity: 1;
+    }
+}
+
+/*第三页动画*/
+
+.xcyScreen-three-fadeInLeftBig1 {
+    -webkit-animation: fadeInLeftBig 1s .2s ease both;
+    -moz-animation: fadeInLeftBig 1s .2s ease both;
+}
+
+.xcyScreen-three-fadeInLeftBig2 {
+    -webkit-animation: fadeInLeftBig 1s 1.2s ease both;
+    -moz-animation: fadeInLeftBig 1s 1.2s ease both;
+}
+
+.xcyScreen-three-fadeInRightBig1 {
+    -webkit-animation: fadeInRightBig 1s .7s ease both;
+    -moz-animation: fadeInRightBig 1s .7s ease both;
+}
+
+.xcyScreen-three-fadeInRightBig2 {
+    -webkit-animation: fadeInRightBig 1s 1.7s ease both;
+    -moz-animation: fadeInRightBig 1s 1.7s ease both;
+}
+
+/*从左进入特效*/
+@-webkit-keyframes fadeInLeftBig {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-2000px)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0)
+    }
+}
+
+@-moz-keyframes fadeInLeftBig {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(-2000px)
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateX(0)
+    }
+}
+
+/*右侧侧进入*/
+@-webkit-keyframes fadeInRightBig {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(2000px)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0)
+    }
+}
+
+@-moz-keyframes fadeInRightBig {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(2000px)
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateX(0)
+    }
+}
+
+/*第四页动画*/
+.screen-four-rotateIn1 {
+    -webkit-animation: screen-four-rotateIn 1s 1.2s ease both;
+    -moz-animation: screen-four-rotateIn 1s 1.2s ease both;
+}
+
+.screen-four-rotateIn2 {
+    -webkit-animation: screen-four-rotateIn 1s 1.7s ease both;
+    -moz-animation: screen-four-rotateIn 1s 1.7s ease both;
+}
+
+.screen-four-rotateIn3 {
+    -webkit-animation: screen-four-rotateIn 1s 2.2s ease both;
+    -moz-animation: screen-four-rotateIn 1s 2.2s ease both;
+}
+
+.screen-four-rotateIn4 {
+    -webkit-animation: screen-four-rotateIn 1s 2.7s ease both;
+    -moz-animation: screen-four-rotateIn 1s 2.7s ease both;
+}
+
+/*中间部分的淡入*/
+.screen-four-centerFideIn {
+    -webkit-animation: screen-four-centerFideIn 1s .7s ease both;
+    -moz-animation: screen-four-centerFideIn 1s .7s ease both;
+}
+
+/*中间淡入效果*/
+@-webkit-keyframes screen-four-centerFideIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes screen-four-centerFideIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*翻转效果*/
+@-webkit-keyframes screen-four-rotateIn {
+    0% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: rotate(-200deg);
+        opacity: 0
+    }
+    100% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: rotate(0);
+        opacity: 1
+    }
+}
+
+@-moz-keyframes screen-four-rotateIn {
+    0% {
+        -moz-transform-origin: center center;
+        -moz-transform: rotate(-200deg);
+        opacity: 0
+    }
+    100% {
+        -moz-transform-origin: center center;
+        -moz-transform: rotate(0);
+        opacity: 1
+    }
+}
+
+/*第五页动画*/
+/*这里用到了第四页定义的动画*/
+.screen-five-fadeInBottom {
+    -webkit-animation: screen-four-centerFideIn 1s 0.3s ease both;
+    -moz-animation: screen-four-centerFideIn 1s 0.3s ease both;
+}
+
+.screen-five-fadeInTop {
+    -webkit-animation: screen-four-centerFideIn 0.5s 0.8s ease both;
+    -moz-animation: screen-four-centerFideIn 0.5s 0.8s ease both;
+}
+
+.screen-five-bounceInUp {
+    -webkit-animation: screen-five-bounceInDown 1s 1.3s ease both;
+    -moz-animation: screen-five-bounceInDown 1s 1.3s ease both;
+}
+
+.screen-five-bounceInDown {
+    -webkit-animation: screen-five-bounceInUp 1s 1.8s ease both;
+    -moz-animation: screen-five-bounceInUp 1s 1.8s ease both;
+}
+
+.screen-five-bounceInLeft {
+    -webkit-animation: screen-five-bounceInRight 1s 2.3s ease both;
+    -moz-animation: screen-five-bounceInRight 1s 2.3s ease both;
+}
+
+.screen-five-bounceInRight {
+    -webkit-animation: screen-five-bounceInLeft 1s 2.8s ease both;
+    -moz-animation: screen-five-bounceInLeft 1s 2.8s ease both;
+}
+
+/*上*/
+@-webkit-keyframes screen-five-bounceInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(2000px)
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translateY(-30px)
+    }
+    80% {
+        opacity: 1;
+        -webkit-transform: translateY(10px)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0)
+    }
+}
+
+@-moz-keyframes screen-five-bounceInUp {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(2000px)
+    }
+    60% {
+        opacity: 1;
+        -moz-transform: translateY(-30px)
+    }
+    80% {
+        opacity: 1;
+        -moz-transform: translateY(10px)
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(0)
+    }
+}
+
+/*下*/
+@-webkit-keyframes screen-five-bounceInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-2000px)
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translateY(30px)
+    }
+    80% {
+        opacity: 1;
+        -webkit-transform: translateY(-10px)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0)
+    }
+}
+
+@-moz-keyframes screen-five-bounceInDown {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(-2000px)
+    }
+    60% {
+        opacity: 1;
+        -moz-transform: translateY(30px)
+    }
+    80% {
+        opacity: 1;
+        -moz-transform: translateY(-10px)
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(0)
+    }
+}
+
+/*左*/
+@-webkit-keyframes screen-five-bounceInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-2000px)
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translateX(30px)
+    }
+    80% {
+        opacity: 1;
+        -webkit-transform: translateX(-10px)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0)
+    }
+}
+
+@-moz-keyframes screen-five-bounceInLeft {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(-2000px)
+    }
+    60% {
+        opacity: 1;
+        -moz-transform: translateX(30px)
+    }
+    80% {
+        opacity: 1;
+        -moz-transform: translateX(-10px)
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateX(0)
+    }
+}
+
+/*右*/
+@-webkit-keyframes screen-five-bounceInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(2000px)
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translateX(-30px)
+    }
+    80% {
+        opacity: 1;
+        -webkit-transform: translateX(10px)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0)
+    }
+}
+
+@-moz-keyframes screen-five-bounceInRight {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(2000px)
+    }
+    60% {
+        opacity: 1;
+        -moz-transform: translateX(-30px)
+    }
+    80% {
+        opacity: 1;
+        -moz-transform: translateX(10px)
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateX(0)
+    }
+}
+
+/*第六页动画*/
+/*此处借用第五篇已经定义好的动画*/
+.screen-six-bounceInRight {
+    -webkit-animation: screen-five-bounceInRight 1s 0.2s ease both;
+    -moz-animation: screen-five-bounceInRight 1s 0.2s ease both;
+}
+
+.screen-six-bounceInLeft {
+    -webkit-animation: screen-five-bounceInLeft 1s 0.7s ease both;
+    -moz-animation: screen-five-bounceInLeft 1s 0.7s ease both;
+}
+
+/*此处借用screen-four-centerFideIn效果*/
+/*线生长*/
+.screen-six-myLinegrow1 {
+    -webkit-animation: screen-six-myLinegrow1 1s 1.2s ease both;
+    -moz-animation: screen-six-myLinegrow1 1s 1.2s ease both;
+}
+
+.screen-six-FadeIn1 {
+    -webkit-animation: screen-four-centerFideIn 1s 1.7s ease both;
+    -moz-animation: screen-four-centerFideIn 1s 1.7s ease both;
+}
+
+.screen-six-FadeIn2 {
+    -webkit-animation: screen-four-centerFideIn 1s 2.2s ease both;
+    -moz-animation: screen-four-centerFideIn 1s 2.2s ease both;
+}
+
+.screen-six-FadeIn3 {
+    -webkit-animation: screen-four-centerFideIn 1s 2.7s ease both;
+    -moz-animation: screen-four-centerFideIn 1s 2.7s ease both;
+}
+
+.screen-six-FadeIn4 {
+    -webkit-animation: screen-four-centerFideIn 1s 3.2s ease both;
+    -moz-animation: screen-four-centerFideIn 1s 3.2s ease both;
+}
+
+/*第七页动画*/
+/*这里借用第五屏幕定义好的screen-five-bounceInLeft*/
+.screen-seven-bounceInLeft1 {
+    -webkit-animation: screen-five-bounceInRight 1s 0.2s ease both;
+    -moz-animation: screen-five-bounceInRight 1s 0.2s ease both;
+}
+
+.screen-seven-bounceInLeft2 {
+    -webkit-animation: screen-five-bounceInRight 1s 0.7s ease both;
+    -moz-animation: screen-five-bounceInRight 1s 0.7s ease both;
+}
+
+.screen-seven-bounceInLeft3 {
+    -webkit-animation: screen-five-bounceInRight 1s 1.2s ease both;
+    -moz-animation: screen-five-bounceInRight 1s 1.2s ease both;
+}
+
+/*第八页动画*/
+/*这里借用页面四定义好的screen-four-centerFideIn效果*/
+.xcyScreen-eight-centerFideIn {
+    -webkit-animation: screen-four-centerFideIn 1s ease both;
+    -moz-animation: screen-four-centerFideIn 1s ease both;
+}

@@ -1,0 +1,233 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>小熊出品</title>
+    <!-- 引用rem布局 -->
+    <script>
+        (function (b, c) {
+            var d = b.documentElement,
+                    resizeEvt = 'orientationchange' in c ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var a = d.clientWidth;
+                        if (!a) return;
+                        d.style.fontSize = (20 * (a / 750)) > 100 ? 100 + "px" : (100 * (a / 750)) + 'px'
+                    },
+                    anime = c.requestAnimationFrame || c.webkitRequestAnimationFrame || c.mozRequestAnimationFrame || c.oRequestAnimationFrame ||
+                            function (e) {
+                                return setTimeout(e, 16.67)
+                            };
+            if (!b.addEventListener) return;
+            c.addEventListener(resizeEvt, recalc, false);
+            b.addEventListener('DOMContentLoaded', recalc, false)
+        })(document, window);
+    </script>
+    <!-- 引入swiper核心css-->
+    <link rel="stylesheet" href="./lib/swiper/swiper-3.3.1.min.css">
+    <!-- 引入公共样式-->
+    <link rel="stylesheet" href="./css/common.css"/>
+    <!-- 引入自己写的css-->
+    <link rel="stylesheet" href="./css/hostProjectH5.css"/>
+    <link rel="stylesheet" href="./css/hostProjectC3.css"/>
+</head>
+<body>
+<!--swiper容器-->
+<div class="swiper-container swiper-container-vertical">
+    <div class="swiper-wrapper">
+        <!-- 第一屏 -->
+        <div class="swiper-slide xcyScreen-one swiper-slide-active">
+            <!-- 第一屏上部分动画-->
+            <div class="scyScreen-one-top">
+
+            </div>
+            <!-- 第一屏下部分动画-->
+            <div class="scyScreen-one-bottom"></div>
+        </div>
+        <!-- 第二屏 -->
+        <div class="swiper-slide xcyScreen-two swiper-slide-next">
+            <!-- 正在丢失的数据-->
+            <div class="xcyScreen-two-title">
+
+            </div>
+            <div class="xcyScreen-two-main">
+                <div class="xcyScreen-two-main1"></div>
+                <div class="xcyScreen-two-main2"></div>
+            </div>
+        </div>
+        <!-- 第三屏 -->
+        <div class="swiper-slide xcyScreen-three">
+            <!-- 发掘隐藏的数据-->
+            <div class="xcyScreen-three-title">
+
+            </div>
+            <!-- 其他内容-->
+            <div class="xcyScreen-three-main">
+                <!-- 四个模块内容-->
+                <div class="xcyScreen-three-mian1"></div>
+                <div class="xcyScreen-three-mian2"></div>
+                <div class="xcyScreen-three-mian3"></div>
+                <div class="xcyScreen-three-mian4"></div>
+            </div>
+        </div>
+        <!-- 第四屏 -->
+        <div class="swiper-slide xcyScreen-four">
+            <!-- 第四屏标题-->
+            <div class="xcyScreen-four-title"></div>
+            <!-- 第四屏中间部分-->
+            <div class="xcyScreen-four-center"></div>
+            <!-- 第四屏旋转长方体部分-->
+            <ul class="xcyScreen-four-fans">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <!-- 第五屏 -->
+        <div class="swiper-slide xcyScreen-five">
+            <!-- 星际背景图-->
+            <div class="xcyScreen-five-startBgc">
+                <!-- 第五屏的标题 -->
+                <div class="xcyScreen-five-title"></div>
+                <!-- 个性化内容部分 -->
+                <ul class="xcyScreen-five-content">
+                    <li class="xcyScreen-five-contentText1"></li>
+                    <li class="xcyScreen-five-contentText2"></li>
+                    <li class="xcyScreen-five-contentText3"></li>
+                    <li class="xcyScreen-five-contentText4"></li>
+                </ul>
+                <!-- 底部火星人部分-->
+                <div class="xcyScreen-five-Mars">
+                    <div class="xcyScreen-five-MarsMan"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 第六屏 -->
+        <div class="swiper-slide xcyScreen-six">
+            <!-- 第六屏的标题-->
+            <div class="xcyScreen-six-title">
+
+            </div>
+            <!-- 第六屏的上边大手机模块部分-->
+            <div class="xcyScreen-six-title-bigPhone">
+                <!-- 统一群发 -->
+                <div class="xcyScreen-six-Mass">
+                    <span></span>
+                    <li></li>
+                    <span></span>
+
+                    <div></div>
+                </div>
+                <!-- 实时监控 -->
+                <div class="xcyScreen-six-monitoring">
+                    <span></span>
+                    <li></li>
+                    <span></span>
+
+                    <div></div>
+                </div>
+                <!-- 团结协作 -->
+                <div class="xcyScreen-six-Collaboration">
+                    <span></span>
+                    <li></li>
+                    <span></span>
+
+                    <div></div>
+                </div>
+            </div>
+            <!-- 第六屏下边电脑模块部分-->
+            <div class="xcyScreen-six-title-pc">
+                <!-- 集合公众号至一个平台 -->
+                <div class="xcyScreen-six-platform">
+                    <span></span>
+                    <li></li>
+                    <li></li>
+                    <span></span>
+
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <!-- 第七屏 -->
+        <div class="swiper-slide xcyScreen-seven">
+            <!-- 第七屏标题-->
+            <div class="xcyScreen-seven-title"></div>
+            <!-- 第七屏内容-->
+            <div class="xcyScreen-seven-content">
+                <!-- 三块内容-->
+                <div class="xcyScreen-seven-content-intel"></div>
+                <div class="xcyScreen-seven-content-mazDa"></div>
+                <div class="xcyScreen-seven-content-amazon"></div>
+            </div>
+        </div>
+        <!-- 第八屏 -->
+        <div class="swiper-slide xcyScreen-eight">
+            <!-- 第八屏幕 -->
+            <img class="xcyScreen-eight-content" src="images/xcyScreen-eight-content.png"/>
+        </div>
+    </div>
+</div>
+<!--固定定位的向下箭头-->
+<div class="fixed-arrows">
+    <span></span>
+</div>
+<!--音乐区块-->
+<div class="fixed-music">
+    <audio controls autoplay>
+        <source src="./music/myMusic.mp3"/>
+    </audio>
+</div>
+<script src="lib/swiper/zepto.min.js"></script>
+<script src="lib/swiper/swiper.jquery.min.js"></script>
+<script src="js/hostProjectH5.js"></script>
+</body>
+</html>
+<script src="http://static.weixinhost.com/private/wechat-config/0.1.0/wechat-config-utils.js"
+        type="text/javascript"></script>
+<script>
+    setTimeout(function () {
+        var _ha_config = {
+            "appid": "",          //尽量传递
+            "openid": "",         //无法获取可以不传递
+            "path": "/addon/XXX", //无必要可以不传递
+            "page": "",           //无必要可以不传递
+            "domain"    : ""      //无必要可以不传递
+        };
+        console.log(1);
+        var _wechat_config = {
+            'pic': "http://1.xcys.applinzi.com/images/hostSever.jpg",
+            'title': "侯斯特驱动微信CRM",
+            'desc': "我是你正在寻找的全新微信CRM平台",
+            'link': "http://www.baidu.com",
+            'hide_menu': false,  //是否关闭菜单
+            'hide_bar': false,  //是否关闭底部bar
+            'appid': 'wxb1da4e0fd6ad1262',
+            'debug': false
+        };
+        window.WechatConfigUtils.init(_wechat_config, _ha_config);
+        window.WechatConfigUtils.ready(function (wechatConfig, Ha) {
+            //分享到QQ空间
+            wx.onMenuShareQZone({
+                title: '侯斯特驱动微信CRM', // 分享标题
+                desc: '我是你正在寻找的全新微信CRM平台', // 分享描述
+                link: 'http://www.baidu.com', // 分享链接
+                imgUrl: 'http://1.xcys.applinzi.com/images/hostSever.jpg', // 分享图标
+                success: function () {
+                    // 用户确认分享后执行的回调函数todo
+
+                },
+
+                    // 用户取消分享后执行的回调函数todo
+
+                });
+            });
+
+    }, 100);
+</script>

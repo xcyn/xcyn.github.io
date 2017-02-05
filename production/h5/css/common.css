@@ -1,0 +1,86 @@
+/*reset css*/
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, :before, :after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-tap-highlight-color: transparent;
+    /*设置宽度以边框开始计算*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+body {
+    font-size: 14px;
+    font-family: "MicroSoft YaHei", sans-serif;
+    color: #333;
+    background: #f6f6f8;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+input {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+    /*在移动端清除浏览器默认样式*/
+    -webkit-appearance: none;
+}
+
+select, input, img, select {
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent
+}
+
+a:link {
+    color: #333;
+}
+
+a:visited {
+    color: #333;
+}
+
+a:hover, a:active, a:focus {
+    color: #333;
+    /*text-decoration: underline;*/
+}
+
+/*common css*/
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+.poRe{
+    position: relative;
+}
+.poAb{
+    position: absolute;
+}
+.poFi{
+    position: fixed;
+}
+.poBotm{
+    bottom: 0;
+}
+
+.clearfix:after, .clearfix:before {
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
