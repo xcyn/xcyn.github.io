@@ -1,0 +1,50 @@
+[
+  {
+    goodsName: '方一勺1',
+    images: 'mockImage/方一勺1.jpg',
+    price: 111,
+    adress: '北京',
+  },
+  {
+    goodsName: '方一勺2',
+    images: 'mockImage/方一勺2.jpg',
+    price: 222,
+    adress: '北京',
+  },
+  {
+    goodsName: '方一勺3',
+    images: 'mockImage/方一勺3.jpg',
+    price: 333,
+    adress: '北京',
+  },
+  {
+    goodsName: '方一勺4',
+    images: 'mockImage/方一勺4.jpg',
+    price: 444,
+    adress: '北京',
+  },
+  {
+    goodsName: '模特1',
+    images: 'mockImage/模特1.jpg',
+    price: 555,
+    adress: '北京',
+  },
+  {
+    goodsName: '薛之谦1',
+    images: 'mockImage/薛之谦1.jpeg',
+    price: 100,
+    adress: '北京',
+  },
+  {
+    goodsName: '薛之谦1',
+    images: 'mockImage/薛之谦2.jpeg',
+    price: 100,
+    adress: '北京',
+  },
+  {
+    goodsName: '薛之谦3',
+    images: 'mockImage/薛之谦3.jpeg',
+    price: 100,
+    adress: '北京',
+  }
+]
