@@ -1,30 +1,30 @@
-return {
+{
   "status": 1,
   "errorCode": 0,
   "body": {
     "id": 999,
     "goodList": [
       {
-        "goodsName": "方一勺1",
-        "images": "http://xcyn.github.io/production/mock/mockImage/方一勺1.jpg",
+        "goodsName": "方一�?",
+        "images": "http://xcyn.github.io/production/mock/mockImage/方一�?.jpg",
         "price": "111",
         "adress": "北京"
       },
       {
-        "goodsName": "方一勺2",
-        "images": "http://xcyn.github.io/production/mock/mockImage/方一勺2.jpg",
+        "goodsName": "方一�?",
+        "images": "http://xcyn.github.io/production/mock/mockImage/方一�?.jpg",
         "price": "222",
         "adress": "北京"
       },
       {
-        "goodsName": "方一勺3",
-        "images": "http://xcyn.github.io/production/mock/mockImage/方一勺3.jpg",
+        "goodsName": "方一�?",
+        "images": "http://xcyn.github.io/production/mock/mockImage/方一�?.jpg",
         "price": "333",
         "adress": "北京"
       },
       {
-        "goodsName": "方一勺4",
-        "images": "http://xcyn.github.io/production/mock/mockImage/方一勺4.jpg",
+        "goodsName": "方一�?",
+        "images": "http://xcyn.github.io/production/mock/mockImage/方一�?.jpg",
         "price": "444",
         "adress": "北京"
       },
@@ -35,20 +35,20 @@ return {
         "adress": "北京"
       },
       {
-        "goodsName": "薛之谦1",
-        "images": "http://xcyn.github.io/production/mock/mockImage/薛之谦1.jpeg",
+        "goodsName": "薛之�?",
+        "images": "http://xcyn.github.io/production/mock/mockImage/薛之�?.jpeg",
         "price": "100",
         "adress": "北京"
       },
       {
-        "goodsName": "薛之谦1",
-        "images": "http://xcyn.github.io/production/mock/mockImage/薛之谦2.jpeg",
+        "goodsName": "薛之�?",
+        "images": "http://xcyn.github.io/production/mock/mockImage/薛之�?.jpeg",
         "price": "100",
         "adress": "北京"
       },
       {
-        "goodsName": "薛之谦3",
-        "images": "http://xcyn.github.io/production/mock/mockImage/薛之谦3.jpeg",
+        "goodsName": "薛之�?",
+        "images": "http://xcyn.github.io/production/mock/mockImage/薛之�?.jpeg",
         "price": "100",
         "adress": "北京"
       }
