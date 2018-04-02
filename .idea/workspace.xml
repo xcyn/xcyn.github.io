@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5176a68b-4ee3-48f5-9262-baeebc26080c" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/bianbian/images/01.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/bianbian/images/02.jpg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/3d/images/01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/3d/images/02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/3d/images/03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/3d/images/04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/3d/images/05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/3d/images/06.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/3d/images/07.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/3d/images/08.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/3d/images/09.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/3d/images/10.jpg" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/production/3d/.idea/.name" afterPath="$PROJECT_DIR$/production/bianbian/.idea/.name" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/production/3d/.idea/modules.xml" afterPath="$PROJECT_DIR$/production/bianbian/.idea/modules.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/production/3d/.idea/vcs.xml" afterPath="$PROJECT_DIR$/production/bianbian/.idea/vcs.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/production/3d/.idea/workspace.xml" afterPath="$PROJECT_DIR$/production/bianbian/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/production/3d/.idea/小妞长得可以.iml" afterPath="$PROJECT_DIR$/production/bianbian/.idea/小妞长得可以.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/production/3d/index.html" afterPath="$PROJECT_DIR$/production/bianbian/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/h5/lib/swiper/swiper-3.3.1.min.js" afterPath="$PROJECT_DIR$/production/h5/lib/swiper/swiper-3.3.1.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/h5/lib/swiper/swiper.jquery.min.js" afterPath="$PROJECT_DIR$/production/h5/lib/swiper/swiper.jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/mock/.idea/workspace.xml" afterPath="$PROJECT_DIR$/production/mock/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/bianbian/index.html" afterPath="$PROJECT_DIR$/production/bianbian/index.html" />
     </list>
     <ignored path="xcyn.github.io-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,10 +25,20 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.41591784">
+              <caret line="150" column="76" selection-start-line="150" selection-start-column="76" selection-end-line="150" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/production/bianbian/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.525032">
-              <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
+            <state vertical-scroll-proportion="-97.5">
+              <caret line="130" column="6" selection-start-line="130" selection-start-column="6" selection-end-line="130" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -64,8 +53,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/css/index.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/production/bianbian/index.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -250,7 +239,7 @@
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32574153" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16366525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3243243" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -515,14 +504,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.1908498">
-          <caret line="94" column="49" selection-start-line="94" selection-start-column="49" selection-end-line="94" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/common.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.03529412">
@@ -541,8 +522,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/production/bianbian/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.525032">
-          <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
+        <state vertical-scroll-proportion="-97.5">
+          <caret line="130" column="6" selection-start-line="130" selection-start-column="6" selection-end-line="130" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41591784">
+          <caret line="150" column="76" selection-start-line="150" selection-start-column="76" selection-end-line="150" selection-end-column="76" />
           <folding />
         </state>
       </provider>
