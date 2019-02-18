@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="../style/page.css" />
+		<style type="text/css">
+			.full-shot {
+				width: 100%;
+				height: 100%;
+				background: url(../images/page6/06-背景.png) no-repeat;
+				background-size: cover;
+			}
+			.page-6-bg {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+			}
+			.page-6-bg1 {
+				z-index: 1;
+				background: url(../images/page6/06-不上灰的宝箱.png) no-repeat  center 30%;
+				display: none;
+			}
+			.page-6-bg2 {
+				z-index: 2;
+				background: url(../images/page6/06-上灰的宝箱.png) no-repeat  center 30%;
+			}
+			.btn-chuiqi {
+				position: absolute;
+				z-index: 5;
+				left: 50%;
+				bottom: 10%;
+				margin-left: -123px;
+			}
+			.tip {
+				bottom: 15%;
+				text-align: left;
+				display: none;
+			}
+			.go-back {
+				position: absolute;
+				left: 5%;
+				top: 10%;
+				display: none;
+				z-index: 5;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="fullShot" class="full-shot">
+			
+				<img class="go-back" src="../images/page6/返回.png" >
+			
+			<div class="page-6-bg page-6-bg1"></div>
+			<div class="page-6-bg page-6-bg2"></div>
+			<div class="btn-chuiqi">
+				<img src="../images/page6/06-按钮.png" >
+			</div>
+			<div class="tip">
+				嗯？似乎被封印了~<br>
+				先解锁完全女王属性，再来领取女王宝藏！
+			</div>
+		</div>
+	</body>
+</html>
+<script src="../style/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$('.btn-chuiqi').on('click',function(){
+		$('.page-6-bg1').show()
+		$('.page-6-bg2').fadeOut()
+		$('.btn-chuiqi').fadeOut()
+		$('.tip').delay(1000).fadeIn()
+		$('.go-back').delay(2000).fadeIn()
+	})
+	$('.go-back').on('click',function(){
+		window.location.href='./screen.html'
+	})
+</script>

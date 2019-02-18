@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="../style/page.css" />
+		<style type="text/css">
+			html {
+				font-size: 12px;
+			}
+			.full-shot {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				background: url(../images/page8/08-背景.jpg) no-repeat;
+				background-size: cover;
+			}
+			.btn-group {
+				position: absolute;
+				left: 0%;
+				bottom: 15%;
+				width: 90%;
+				display: none;
+			}
+			.btn-group  img {
+				width: 100%;
+			}
+			.tip {
+				bottom: 55%;
+				display: none;
+			}
+			.click-gupin {
+				position: absolute;
+				width: 36%;
+				height: 28%;
+				top: 46%;
+				right: 5%;
+			}
+			.sanjiao {
+				position: absolute;
+				right: 6%;
+				top: 52%;
+				width: 5%;
+				height: 5%;
+				animation: rightArrow 1s infinite ;
+			}
+			@keyframes rightArrow{
+				0%{transform: translateX(-100%)}
+				100%{transform: translateX(0%);}
+			}
+			.btn-group .ok {
+				position: absolute;
+				left: 5%;
+				bottom: -40%;
+				width: 30%;
+				height: auto
+			}
+		</style>
+	</head>
+	<body>
+		<div id="fullShot" class="full-shot">
+			<img class="sanjiao" src="../images/page3/02-指示三角.png" alt="">
+			<div class="click-gupin">
+				
+			</div>
+			<div class="tip">
+				4、琴弦奏起了潺潺音乐，这首曲子让你想起了什么样的画面？
+			</div>
+			<div class="btn-group">
+				<div class="btn-group-item"  onclick='btnClick(1)'>
+					<img src="../images/page8/08-梨花树下.png" >
+				</div>
+				<div class="btn-group-item" onclick='btnClick(2)'>
+					<img src="../images/page8/08-风和日丽.png" >
+				</div>
+				<div class="btn-group-item" onclick='btnClick(3)'>
+					<img src="../images/page8/08-此去经年.png" >
+				</div>
+				<img onclick='ok(3)' class="ok" src="../images/page7/07-确定.png" >
+			</div>			
+		</div>
+	</body>
+</html>
+<script src="../style/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$('.click-gupin ').on('click',function(){
+		$('.tip').fadeIn()
+		$('.btn-group').fadeIn()
+		$('.click-gupin ').hide()
+		$('.sanjiao').hide()
+	})
+	
+	var toNextPage = false
+	function btnClick(n){
+		toNextPage = true
+		$('.btn-group-item').css('border','none')
+		$($('.btn-group-item')[n-1]).css('border','solid 2px #4eebfa')
+		$('.full-bg').hide()
+		$('.tip').hide()
+		if(n==1){
+			$('.full-bg1').fadeIn()
+			
+		}else if(n==2){
+			$('.full-bg2').fadeIn()
+		}else if(n==3){
+			$('.full-bg3').fadeIn()
+		}
+	}
+
+	function ok() {
+		if(toNextPage) {
+			window.location.href = './unlock.html'
+		}
+	}
+</script>

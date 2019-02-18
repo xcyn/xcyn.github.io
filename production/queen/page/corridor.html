@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../style/page.css" />
+  <title>女王</title>
+  <style type="text/css">
+  	.new-light {
+		width: 100%;
+		height: 100%;
+	}
+	#click-box {
+		width: 30%;
+		height: 20%;
+		position: absolute;
+		top: 3%;
+		left: 35%;
+		z-index: 10;
+	}
+	.tip,.light-change-container,#ok {
+		display: none;
+	}
+	@keyframes rightArrow{
+		0%{transform: translateX(-100%)}
+		100%{transform: translateX(0%);}
+	}
+	@keyframes rightArrow2{
+		0%{transform: translateX(0%)}
+		100%{transform: translateX(100%);}
+	}
+	.light-sanjiao {
+		animation: rightArrow 1s infinite ;
+	}
+  </style>
+</head>
+<body>
+  <div class="corridor-container">
+    <div class="mark">
+
+    </div>
+    <div class="corridor-content">
+      <!-- 灯炳 -->
+      <div style="position: relative;">
+		  <div id="click-box"></div>
+        <img id="light0" class="light new-light" src="../images/page3/01-默认灯.png" alt="">
+        <img id="light1" class="big-light1 new-light" src="../images/page3/01-1灯.png" alt="">
+		<img id="light2" class="big-light1 new-light" src="../images/page3/01-3灯.png" alt="">
+		<img id="light3" class="big-light1 new-light" src="../images/page3/01-2灯.png" alt="">
+        <img id="sanjiao" class="light-sanjiao" src="../images/page3/02-指示三角.png" alt="">
+      </div>
+      <div class="tip">
+        1、华灯初上，长廊的灯火金碧恢弘，你觉得哪盏灯适合此刻的场景？
+      </div>
+      <div class="light-change-container">
+        <div class="light-change">
+            <img class="chose-box" onclick='openLight(1)' src="../images/page3/02-三盏小灯-1.png" alt="">
+            <img class="chose-box" onclick='openLight(2)' src="../images/page3/02-三盏小灯-2.png" alt="">
+            <img class="chose-box" onclick='openLight(3)' src="../images/page3/02-三盏小灯-3.png" alt="">
+          </div>
+      </div>
+      <img id="ok" class="ok-btn" src="../images/page3/02-确定按钮.png" alt="">
+    </div>
+  </div>
+  
+</body>
+</html>
+<script src="../style/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+
+  var num = 0
+  var defalutLight = document.getElementById('light0')
+  var sanjiao = document.getElementById('sanjiao')
+  var ok = document.getElementById('ok')
+  var toNextPage = false
+  defalutLight.addEventListener('click', function() {
+    num = 1
+    sanjiao.style.display = 'none'
+    openLight(num)
+  })
+
+  ok.addEventListener('click', function() {
+	  if(toNextPage == false){
+		  console.log('请选择')
+	  }else {
+		  window.location.href ='./fullShot.html'
+
+	  }
+  })
+
+
+  function closeAll() {
+    var all = [0,1,2,3]
+    all.forEach(function(num) {
+      var light = document.getElementById('light' + num)
+      light.style.display = 'none'
+	  light.style.border = 'none'
+	  $('.chose-box').css('border','none')
+    })
+  }
+
+  function openLight(num) {
+	toNextPage = true
+	$('.tip').hide()
+    closeAll()
+    $($('.new-light')[num]).show()
+	$($('.chose-box')[num-1]).css('border','solid 2px #4eebfa')
+  }
+$('#click-box').on('click',function(){
+	$('.tip').fadeIn()
+	$('.light-change-container').fadeIn()
+	$('#ok').fadeIn()
+	$('.light-sanjiao').hide()
+})
+
+
+
+
+</script>

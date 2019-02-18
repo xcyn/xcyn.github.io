@@ -1,0 +1,102 @@
+* {
+	margin: 0;
+	padding: 0
+}
+html {
+	font-size:100px;
+
+}
+body, html, .corridor-container{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-image: url("../images/page3/02-背景图.jpg");
+	background-size: cover;
+	text-align: center;
+}
+
+.mark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.light-header {
+	width: 100px;
+}
+
+.corridor-content {
+	position: relative;
+	height: 100%
+}
+
+.light {
+	width: 150px;
+}
+
+.big-light1 {
+	width: 100%;
+	position: relative;top: -7px;
+	display: none
+}
+
+.big-light2 {
+	width: 100%;
+	position: relative;top: -17px;
+	display: none
+
+}
+
+.big-light3 {
+	width: 100%;
+	position: relative;top: -57px;left: -2%;
+	display: none
+}
+
+.light-sanjiao {
+	position: absolute;
+	right: 25%;
+	top: 11%;
+	width: 20px;
+}
+
+.tip {
+	position: absolute;
+	right: 10px;
+	bottom: 50%;
+	color: #864107;
+	width: 60%;
+	padding: 10px;
+	border-radius: 10px;
+	background-color:#ece9df;
+	line-height: 1.5;
+	font-size: 16px;
+}
+
+.light-change {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	padding: 5%;
+}
+
+.light-change-container {
+	position: absolute;
+	width: 100%;
+	bottom: 15%
+}
+
+.light-change > img {
+	width: 100px;
+	height: 100px;
+}
+
+.ok-btn {
+	width: 100px;
+	position: absolute;
+	bottom: 5%;
+	margin-left: -50px
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="../style/page.css" />
+		<title>女王</title>
+		<style>
+			* {
+      margin: 0;padding: 0
+    }
+    body, html, .full-shot {
+      width: 100%;
+      height: 100%;
+			overflow: hidden;
+		}
+		.screen {
+			width: 100%;
+      height: 100%;
+			position: relative;
+			background-image: url("../images/page9-10/09-冰涯转石背景.jpg");
+			background-size: cover;
+			overflow: hidden;
+
+		}
+		.title {
+			margin-top: 30%
+		}
+		.ipt {
+			width: 50%;
+			height: 50px;
+			background-image: url("../images/page9-10/10-输入框.png");
+			background-size: cover;
+			position: relative;
+			margin: 10% auto;
+			border-radius: 5px;
+			overflow: hidden;
+
+		}
+		.ipt > input{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			font-size: 18px;
+			padding-left: 5px;
+
+		}
+		.button {
+			width: 250px;
+			margin-top: 40%
+		}
+  </style>
+	</head>
+	<body>
+		<div id='screen' class="screen">
+				<img class="title" src="../images/page9-10/10-文字.png" alt="">
+				<div class="ipt">
+					<input type="text">
+				</div>
+				<img id="button" class="button" src="../images/page9-10/10-解锁框.png" alt="">
+		</div>
+	</body>
+</html>
+<script>
+var bgc = {
+	'1': '../images/page9-10/09-冰涯转石背景.jpg',
+	'2': '../images/page9-10/09-星空朗月背景.jpg',
+	'3': '../images/page9-10/09-面朝大海背景.jpg',
+}
+// 在url上加一个 ?type = 1
+var search = window.location.search;
+var screen = document.getElementById('screen')
+var button = document.getElementById('button')
+var type = search[search.length - 1];
+screen.style.backgroundImage = 'url('+(bgc[type])+')';
+button.addEventListener('click', function() {
+	window.location.href = './personality.html'
+	console.log('下一页面')
+})
+</script>

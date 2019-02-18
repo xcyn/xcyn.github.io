@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="../style/page.css" />
+		<title>女王</title>
+		<style>
+			* {
+      margin: 0;padding: 0
+    }
+    body, html, .full-shot{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      background-image: url("../images/page4/0304-背景大图.jpg");
+      background-size: cover;
+      background-position: 100% 0;
+      text-align: center;
+			overflow: hidden;
+    }
+		.tip {
+			bottom: 35%;
+			display: none;
+		}
+		.light-change {
+			display: none;
+		}
+		.ok-btn {
+			display: none;
+		}
+		.light-change-container {
+			bottom: 10%;
+		}
+		.statu ,.chushi-statu{
+			position: absolute;
+				width: 100%;
+				height: 100%;
+				display: none;
+		}
+		.statu>img,.chushi-statu>img {
+			width: 100%;
+			height: 100%;
+		}
+		@keyframes upArrow{
+			0%{transform: translateY(80%)}
+			100%{transform:translateY(0%)}
+		}
+		.chushi-statu>.sanjiao{
+			width: auto;
+			height: auto;
+			position: absolute;
+			left: 50%;
+			top: 20%;
+			animation: upArrow 1s infinite ;
+		}
+		#click-area {
+			display: none;
+			position: absolute;
+			right: 20%;
+			bottom: 44%;
+			width: 50%;
+			height: 10%;
+		}
+		#click-bed {
+			position: absolute;
+			right: 2%;
+			bottom: 50%;
+			width: 90%;
+			height: 23%;
+			display: none;
+		}
+  </style>
+	</head>
+	<body>
+		<div id="fullShot" class="full-shot">
+			<div class="chushi-statu">
+				<img class="sanjiao" src="../images/page4/05-三角.png" >
+				<img src="../images/page4/WechatIMG188.jpeg" >
+			</div>
+			<div class="statu first-statu" style="position: relative;">
+				<img class="first-statu-img" src="../images/page4/05-背景-绿色.jpg" alt="">
+			</div>
+			<div class="statu first-statu"  style="position: relative;">
+				<img class="first-statu-img" src="../images/page4/05-背景-蓝色.jpg" alt="">
+			</div>
+			<div class="statu first-statu"  style="position: relative;">
+				<img class="first-statu-img" src="../images/page4/05-背景-红色.jpg" alt="">
+			</div>
+			<div id='click-bed'></div>
+			<div id="click-area">
+				
+			</div>
+			<div class="tip">
+				2、枕头和床巾的颜色还未选定，你将选择哪种颜色来装点？
+			</div>
+			<div class="light-change-container">
+				<div class="light-change">
+					<img class="chose-box" onclick='openLight(0)' src="../images/page4/05-深竹月-亮色.png" alt="">
+					<img class="chose-box" onclick='openLight(1)' src="../images/page4/05-碧玉石-亮.png" alt="">
+					<img class="chose-box" onclick='openLight(2)' src="../images/page4/05-十样锦-亮色.png" alt="">
+				</div>
+			</div>
+			<img id="ok" class="ok-btn" src="../images/page3/02-确定按钮.png" alt="">
+		</div>
+
+	</body>
+</html>
+<script src="../style/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	var time = 0
+	var fullShot = document.getElementById('fullShot')
+	var toNextStatu = false
+	var loop = function() {
+		time++;
+		// 门完全打开后，进入下一个画面
+		if (time == 200) {
+			console.log('完成')
+// 			$('.tip').fadeIn()
+// 			$('.light-change').fadeIn()
+// 			$('.ok-btn').fadeIn()
+			$('#click-bed').fadeIn()
+			$('.chushi-statu').show()
+			
+			// window.location.href='./page/corridor.html'
+			return;
+		}
+		$('#click-bed').on('click',function(){
+			$('.tip').fadeIn()
+			$('.light-change').css('display','flex')
+			$('.ok-btn').fadeIn()
+			$('#click-bed').hide()
+			$('.sanjiao').hide()
+		})
+		// 门打开 从左到右,然后从右到左
+		fullShot.style.backgroundPosition = (time) + '% 0';
+		if (time > 99) {
+			fullShot.style.backgroundPosition = (200 - time) + '% 0';
+		}
+		// 光线变化
+		setTimeout(loop, 40);
+	}
+	loop()
+	function openLight(num) {
+		toNextStatu = true
+		  $('.first-statu').hide()
+			$('.tip').hide()
+			$('.chose-box').css('border','none')
+			$($('.first-statu')[num]).show()
+			$($('.chose-box')[num]).css('border','solid 2px #4eebfa')
+	}
+	$('#ok').on('click',function(){
+		if(toNextStatu == false){
+				  console.log('请选择')
+		}else {
+			$('.tip').fadeOut(function(){
+				$('.tip').text('噫？这只宝箱略显蹊跷,上前探查一番。（点击宝箱）').fadeIn()
+				$('#click-area').fadeIn()
+			})
+			$('.light-change').fadeOut()
+			$('.ok-btn').fadeOut()
+		}
+	})
+	$('#click-area').on('click',function(){
+		window.location.href ='./treasureChest.html'
+	})
+</script>
